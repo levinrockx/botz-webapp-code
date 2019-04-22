@@ -27,7 +27,12 @@ const routes: Routes = [
   {
     path: 'services',
     component: ServicesComponent,
-  }
+  },
+  {
+    path: 'blog',
+    redirectTo: '',
+    pathMatch: 'full',
+  },
   // { path: 'header', component: HeaderComponent, outlet: 'header'}
 ];
 
