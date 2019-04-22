@@ -1,13 +1,25 @@
-.banner-main{
-    height: 100vh;
-    width: 100%;
-    padding: 0px;
-    margin: 0px;
-    background-image: url("../../assets/img/bg1.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+.banner-main {
+  height: 100vh;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  background-image: url("../../assets/img/bg1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.banner-content{
-    margin-top: 269px;
-    color: #ffffff;
+.banner-content {
+  margin-top: 200px;
+  color: #ffffff;
+  width: 580px;
+  h1 {
+    font-family: SourceCodeProBlack;
+    width: 432px;
+    font-size: 80px;
+  }
+  p {
+    font-family: SourceCodeProLight;
+    font-size: 0.8rem;
+    width: 580px;
+    margin-bottom: 18px;
+  }
 }
