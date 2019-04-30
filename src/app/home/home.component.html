@@ -12,36 +12,29 @@
       <button class="btn ghost-btn">Know more</button>
     </div>
   </div>
-
-  <video autoplay muted loop id="bgVideo">
+  <!-- <video autoplay muted loop id="bgVideo">
     <source src="assets/videos/bg1.mp4" type="video/mp4">
     Your browser does not support HTML5 video.
-  </video>
+  </video> -->
 </div>
-<div class="row services-main">
-  <div class="container">
 
-  </div>
-  <div class="container  ">
-    <div class="row rc1">
-      <div class="col-md-4 cardbg ">
-        <img src="assets/img/ec1.png" class="ec1 ">
-      </div>
-      <div class="col-md-4 cardbg">
-          <img src="assets/img/ec1.png" class="ec1 ">
-      </div>
-      <div class="col-md-4 cardbg">
-          <img src="assets/img/ec1.png" class="ec1 ">
-      </div>
-      <div class="col-md-4 cardbg ">
-        <img src="assets/img/ec1.png" class="ec1 ">
-      </div>
-      <div class="col-md-4 cardbg">
-          <img src="assets/img/ec1.png" class="ec1 ">
-      </div>
-      <div class="col-md-4 cardbg">
-          <img src="assets/img/ec1.png" class="ec1 ">
+<div class="container">
+  <div class="row blog-cards-main">
+    <div class="row col-md-12 m-0 p-0">
+      <div *ngFor="let i of cardList" class="col-md-4 p-4">
+        <div class="blog-card">
+          <img src="assets/img/ec1.png" class="blog-img">
+          <div>
+            <!-- text goes here -->
+          </div>
+        </div>
       </div>
     </div>
+  </div>
+</div>
+
+<div class="row col-md-12 p-0 m-0 our-mission-main">
+  <div class="container">
+    <!-- text goes here -->
   </div>
 </div>

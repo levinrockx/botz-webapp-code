@@ -3,9 +3,11 @@
   width: 100%;
   padding: 0px;
   margin: 0px;
-  // background-image: url("../../assets/img/bg1.jpg");
+  background-image: url("../../assets/img/bg1.jpg");
   background-repeat: no-repeat;
+  overflow: hidden;
   background-size: cover;
+  z-index: -1;
 }
 .banner-content {
   margin-top: 200px;
@@ -23,25 +25,43 @@
     margin-bottom: 18px;
   }
 }
-#bgVideo{
+#bgVideo {
   position: absolute;
   top: calc(100vh - 1000px);
   z-index: -1;
 }
-.cardbg{
-  
-    width: 399px;
-    height: 463px;
-    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-    background-color: #ffffff;
-  
+// .cardbg{
+
+//     width: 399px;
+//     height: 463px;
+//     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+//     background-color: #ffffff;
+
+// }
+// .ec1{
+//   width: 360px;
+//   height: 264.5px;
+//   object-fit: contain;
+// }
+// .rc1{
+//   margin-top: 22vh;
+//   // z-index: -999;
+// }
+.blog-cards-main{
+  margin-top: 100px;
+  padding-bottom: 112px;
 }
-.ec1{
-  width: 360px;
-  height: 264.5px;
-  object-fit: contain;
+.blog-card {
+  // width: 399px;
+  height: 463px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  background-color: #ffffff;
+  padding:0;
 }
-.rc1{
-  margin-top: 22vh;
-  z-index: -999;
+.blog-img{
+  width: 100%;
+}
+.our-mission-main{
+  height: 500px;
+  background-color: #dfe6e9;
 }

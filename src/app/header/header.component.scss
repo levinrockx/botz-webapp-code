@@ -22,6 +22,8 @@
   padding: 0;
   margin: 0;
   top: 0;
+  z-index: 9999;
+  // width: calc(100vw - 15px);
 }
 .header-logo{
   width: 41px;
