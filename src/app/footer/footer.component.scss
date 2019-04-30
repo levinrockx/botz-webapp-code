@@ -8,6 +8,7 @@
   height: 600px;
   color: white;
   font-size: 0.8rem;
+  border-bottom: 10px solid #ED3833;
 }
 .footer-content {
   margin-top: 198px;
@@ -29,6 +30,6 @@ ul {
   }
   li:hover {
     transition: 0.5s;
-    color: #c0392b;
+    color: #ED3833;
   }
 }
