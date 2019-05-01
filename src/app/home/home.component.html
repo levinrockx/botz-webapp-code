@@ -1,10 +1,10 @@
 <div class="row banner-main">
-    <div class="video-container-main">
-        <video autoplay muted playsinline loop id="bgVideo">
-          <source src="assets/videos/bg1.mp4" type="video/mp4">
-          Your browser does not support HTML5 video.
-        </video>
-      </div>
+  <div class="video-container-main">
+    <video autoplay muted playsinline loop id="bgVideo">
+      <source src="assets/videos/bg1.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+  </div>
   <div class="container">
     <div class="banner-content">
       <h1>Igniting
@@ -20,22 +20,18 @@
   </div>
 </div>
 
-<div class="container">
-  <div class="row blog-cards-main">
-    <div class="row col-md-12 m-0 p-0">
-      <div *ngFor="let i of cardList" class="col-md-4 p-4">
-        <div class="blog-card">
-          <img src="assets/img/ec1.png" class="blog-img">
-          <div>
-            <div class="text-center ">
-              <p>
-                <b> Heading of Blog 1</b>
-              </p>
-              <P>
-                Lorem ipsum is a mockup text used for webdesign and other things..
-              </P>
+<div class="row col-12 p-0 m-0 blogs-cards-row">
+  <div class="container">
+    <div class="row blog-cards-main">
+      <div class="row col-12 m-0 p-0">
+        <div *ngFor="let card of cardList" class="col-4 p-4">
+          <div class="blog-card">
+            <img src="assets/img/ec1.png" class="blog-img">
+            <div class="blog-card-text-main">
+              <div class="blog-text-date">{{card.date}}</div>
+              <div class="blog-text-title">{{card.title}}</div>
+              <div class="blog-text-desc">{{card.desc}}</div>
             </div>
-
           </div>
         </div>
       </div>
@@ -43,18 +39,14 @@
   </div>
 </div>
 
-<div class="row col-md-12 p-0 m-0 our-mission-main">
+<div class="row col-12 p-0 m-0 our-mission-main">
   <div class="container">
-    <div class="mtext">
-      <h1>
-        <b>Our Mission</b>
-        <div class="pclass">
-          <p>
-            To work closely with customers, understand their requirements and then provide them the best solution
-            possible, ensuring the best quality and personalized service our customers expect to get.
-          </p>
-        </div>
-      </h1>
+    <div class="mission-heading">
+      Our Mission
+    </div>
+    <div class="mission-text">
+      To work closely with customers, understand their requirements and then provide them the best solution
+      possible, ensuring the best quality and personalized service our customers expect to get.
     </div>
   </div>
 </div>
