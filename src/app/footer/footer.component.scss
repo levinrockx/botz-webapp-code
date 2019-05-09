@@ -8,7 +8,7 @@
   height: 600px;
   color: white;
   font-size: 0.8rem;
-  border-bottom: 10px solid #ED3833;
+  border-bottom: 10px solid #ed3833;
 }
 .footer-content {
   margin-top: 198px;
@@ -30,12 +30,15 @@ ul {
   }
   li:hover {
     transition: 0.5s;
-    color: #ED3833;
+    color: #ed3833;
   }
 }
-.social-media-icon{
+.social-media-icon {
   margin-left: 12px;
+  transition: 0.5s;
 }
-.social-media-icon:hover{
+.social-media-icon:hover {
   cursor: pointer;
+  transition: 0.5s;
+  color: #ed3833;
 }
