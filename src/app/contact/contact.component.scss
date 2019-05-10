@@ -1,9 +1,30 @@
 .contact-main {
-    margin-top: 200px !important;
-    padding-bottom: 54px !important;
+  margin-top: 200px !important;
+  padding-bottom: 54px !important;
 }
-.contact-heading{
-    font-family: SourceCodeProBlack;
-    font-size: 50px;
-    padding-bottom: 50px !important;
+.contact-heading {
+  font-family: SourceCodeProBlack;
+  font-size: 50px;
+  padding-bottom: 50px !important;
+}
+.cust-input {
+  width: 100%;
+  border: 0px;
+  background-color: #dfe6e9;
+  padding: 10px;
+  font-family: SourceCodeProLight;
+  outline: 0;
+}
+.form-label {
+  margin: auto 0 !important;
+  text-align: left !important;
+}
+.contact-form {
+  margin-top: 50px;
+}
+.contact-item {
+  margin-bottom: 30px !important;
+}
+.submit-btn {
+    float: right;
 }
