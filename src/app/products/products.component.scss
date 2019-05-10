@@ -1,23 +1,31 @@
-.mainclass{
-    margin-top: 200px;
-    font-family: SourceCodePro;
-    margin-bottom: 50px;
-    width: 360px;
-    height: 63px;
+.products-main {
+  background-color: #dfe6e9;
+  padding-bottom: 54px !important;
 }
-.card{
-    height: 400px;;
-    margin-bottom: 50px
+.mainclass {
+  margin-top: 200px;
+  font-family: SourceCodeProBlack;
+  font-size: 50px;
+  padding-bottom: 50px;
 }
-.subone{
-    padding-top: 96px;
-    padding-left: 552px;
-    padding-right: 116px;
-    padding-bottom: 64px;
-    
-    font-size: 0.813rem;
+.card {
+//   height: 400px;
+  padding: 80px;
+  margin-bottom: 50px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  background-color: #ffffff;
+  border-radius: 0px;
 }
-.mini{
-    margin-bottom: 25px;
-    font-size: 1.563rem;
+.subone {
+  font-size: 0.813rem;
+  margin: auto 0;
+}
+.mini {
+  font-family: SourceCodeProBlack;
+  margin-bottom: 25px;
+  font-size: 1.563rem;
+}
+p {
+  text-align: justify;
+  font-size: 1rem;
 }
