@@ -1,49 +1,15 @@
-.about-main {
+.about-main{
   margin-top: 200px;
 }
-.about-heading {
+.about-heading{
   font-size: 50px;
   font-family: SourceCodeProBlack;
   padding-bottom: 50px;
 }
-p {
+p{
   font-size: 1rem;
   text-align: justify;
 }
-.about-text {
+.about-text{
   padding-bottom: 58px;
-}
-.our-team-main {
-  background-color: #dfe6e9;
-}
-.team-heading {
-  margin-top: 100px;
-}
-.team-rows {
-  padding-bottom: 72.6px !important;
-}
-.team-rows:last-child {
-  padding-bottom: 100px !important;
-}
-.team-thumb-img {
-  width: 100%;
-  object-fit: contain;
-  border-radius: 1000px;
-  filter: grayscale(100%);
-  transition: 0.5s;
-}
-.team-thumb-img:hover {
-  cursor: pointer;
-  transition: 0.5s;
-  filter: none;
-}
-.team-info {
-  margin: auto 0px;
-}
-.team-info-name {
-  font-size: 20px;
-  line-height: 1.9;
-}
-.team-info-designation {
-  font-family: SourceCodeProLight;
 }
