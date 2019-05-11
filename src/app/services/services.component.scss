@@ -23,13 +23,46 @@
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
   background-color: #ffffff;
   height: 410px;
-  margin-bottom: 10vh;
+  padding-bottom: 10vh;
 }
 .skillset-main {
   background-color: #dfe6e9;
+  
 }
 .skill-heading {
   font-size: 50px;
   font-family: SourceCodeProBlack;
-  padding-bottom: 20px;
+  padding-bottom: 36px;
+  color: #000000;
+  padding-top: 56px;
 }
+.firstline {
+  font-family: SourceCodePro;
+  font-size: 20px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+}
+.sentences {
+  font-family: SourceCodePro;
+  font-size: 20px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #7e7777;
+  padding-bottom: 9vh;
+}
+.design-heading {
+  font-size: 50px;
+  font-family: SourceCodeProBlack;
+  padding-bottom: 26px;  
+  color: #000000;
+}
+
