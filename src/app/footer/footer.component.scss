@@ -2,12 +2,13 @@
   // position: absolute;
   // bottom: 0px;
   background-color: #272626;
-  width: 100vw;
+  // width: 100vw;
   margin: 0px;
   padding: 0px;
   height: 600px;
   color: white;
   font-size: 0.8rem;
+  border-bottom: 10px solid #ed3833;
 }
 .footer-content {
   margin-top: 198px;
@@ -29,6 +30,15 @@ ul {
   }
   li:hover {
     transition: 0.5s;
-    color: #c0392b;
+    color: #ed3833;
   }
+}
+.social-media-icon {
+  margin-left: 12px;
+  transition: 0.5s;
+}
+.social-media-icon:hover {
+  cursor: pointer;
+  transition: 0.5s;
+  color: #ed3833;
 }

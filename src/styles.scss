@@ -36,3 +36,13 @@ body {
 .clear-both {
   clear: both;
 }
+.regular-btn {
+  background-color: #000000;
+  color: #ffffff;
+  border: 0px;
+  border-radius: 0px;
+  font-size: 0.8rem;
+}
+.regular-btn:hover {
+  color: #ffffff;
+}
