@@ -12,7 +12,7 @@
 }
 .services-tab {
   // transition: 0.5s;
-  padding: 40px 80px !important;
+  padding: 30px 80px !important;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
   .tab-icon {
     margin-right: 10px;
@@ -30,6 +30,7 @@
 .selected-tab {
   background-color: #ed3833;
   color: #ffffff;
+  box-shadow: none;
 }
 .selected-tab::after {
   content: "\25c4";
@@ -37,7 +38,11 @@
   right: 0;
 }
 .right-text {
-  padding: 100px;
+  .right-content{
+    width: 70%;
+    margin: auto auto !important;
+    padding-top: 10%;
+  }
   .right-icon {
     padding-bottom: 20px;
   }
