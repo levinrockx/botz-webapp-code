@@ -1,96 +1,99 @@
 <div class="container service-main">
     <div class="service-heading">Our Services</div>
-    <div class="row card1">
-        <div class="col-5 rectangle1 p-0">
-            <div class=" row p-0 m-0 tab1">
+    <div class="col-12 row m-0 p-0 main-card">
+        <div class="col-5 p-0">
+            <div class="col-12 row p-0 m-0 services-tab" [ngClass]="{'selected-tab' : selectedTab == 0}" (mouseover)="serviceSelected(0)">
                 <div class="col-2 p-0 m-0">
-                    <div class="icon1">
-                            <img src="./assets/img/icons/pen.png">
-                        </div>
+                    <div class="tab-icon">
+                        <fa name="pencil" size="2x"></fa>
+                    </div>
                 </div>
                 <div class="col-10 p-0 m-0">
-                    <div class="tabhead">
+                    <div class="tab-text">
                         PCB Designing
                     </div>
                 </div>
             </div>
-            <div class=" row p-0 m-0 tab1">
+            <div class="col-12 row p-0 m-0 services-tab" [ngClass]="{'selected-tab' : selectedTab == 1}" (mouseover)="serviceSelected(1)">
                 <div class="col-2 p-0 m-0">
-                    <div class="icon1">
-                        <img src="./assets/img/icons/obj.png">
+                    <div class="tab-icon">
+                        <fa name="object-ungroup" size="2x"></fa>
                     </div>
                 </div>
                 <div class="col-10 p-0 m-0">
-                    <div class="tabhead">
+                    <div class="tab-text">
                         Circuit Designing
                     </div>
                 </div>
             </div>
-            <div class=" row p-0 m-0 tab1">
+            <div class="col-12 row p-0 m-0 services-tab" [ngClass]="{'selected-tab' : selectedTab == 2}" (mouseover)="serviceSelected(2)">
                 <div class="col-2 p-0 m-0">
-                    <div class="icon1">
-                            <img src="./assets/img/icons/connect.png">
-                        </div>
+                    <div class="tab-icon">
+                        <fa name="connectdevelop" size="2x"></fa>
+                    </div>
                 </div>
                 <div class="col-10 p-0 m-0">
-                    <div class="tabhead">
+                    <div class="tab-text">
                         Embedded Programming
                     </div>
                 </div>
             </div>
-            <div class=" row p-0 m-0 tab1">
+            <div class="col-12 row p-0 m-0 services-tab" [ngClass]="{'selected-tab' : selectedTab == 3}" (mouseover)="serviceSelected(3)">
                 <div class="col-2 p-0 m-0">
-                    <div class="icon1">
-                            <img src="./assets/img/icons/cogs-solid.png">
-                        </div>
+                    <div class="tab-icon">
+                        <fa name="cogs" size="2x"></fa>
+                    </div>
                 </div>
                 <div class="col-10 p-0 m-0">
-                    <div class="tabhead">
+                    <div class="tab-text">
                         Product Development
                     </div>
                 </div>
             </div>
-            <div class=" row p-0 m-0 tab1">
+            <div class="col-12 row p-0 m-0 services-tab" [ngClass]="{'selected-tab' : selectedTab == 4}" (mouseover)="serviceSelected(4)">
                 <div class="col-2 p-0 m-0">
-                    <div class="icon1">
-                            <img src="./assets/img/icons/code-solid.png">
-                        </div>
+                    <div class="tab-icon">
+                        <fa name="code" size="2x"></fa>
+                    </div>
                 </div>
                 <div class="col-10 p-0 m-0">
-                    <div class="tabhead">
+                    <div class="tab-text">
                         Hardware Designing
                     </div>
                 </div>
             </div>
-            <div class=" row p-0 m-0 tab1">
+            <div class="col-12 row p-0 m-0 services-tab" [ngClass]="{'selected-tab' : selectedTab == 5}" (mouseover)="serviceSelected(5)">
                 <div class="col-2 p-0 m-0">
-                    <div class="icon1">
-                            <img src="./assets/img/icons/laptop-solid.png">
-                        </div>
+                    <div class="tab-icon">
+                        <fa name="laptop" size="2x"></fa>
+                    </div>
                 </div>
                 <div class="col-10 p-0 m-0">
-                    <div class="tabhead">
+                    <div class="tab-text">
                         Software Designing
                     </div>
                 </div>
             </div>
-
         </div>
-        <div class="col-7 rectangle2">
-            <!-- content goes here -->
+        <div class="col-7 right-text">
+            <fa class="right-icon" name="{{icon_name}}" size="3x"></fa>
+            <div class="right-heading">
+                {{service_heading}}
+            </div>
+            <p>{{service_paragraph}}</p>
         </div>
     </div>
 </div>
 <div class="skillset-main">
     <div class="container">
-        <div class="skill-heading ">Our Skill Set</div>
+        <div class="skill-heading">Our Skill Set</div>
         <div class="firstline text-justify">BOTZ has vast experience in various technologies needed to develop a
             successful embedded
             systems project this
-            includes:
+            includes:<br><br>
         </div>
         <div class="sentences text-justify">
-            <br> In depth knowledge of various programming languages such as C, C++,C#, Java and PHP.<br><br>
+            In depth knowledge of various programming languages such as C, C++,C#, Java and PHP.<br><br>
 
             Working to industry standards such as MISRA C1 '&'amp; C2, MISRA C++:2008 and JSF C++ Coding
             Standards.<br><br>
@@ -99,14 +102,15 @@
 
             Porting operating systems and develop BSPs for various hardware and software architectures.<br><br>
 
-            Providing solutions based on a wide number of differing processor architectures from small 8-bit micros such
+            Providing solutions based on a wide number of differing processor architectures from small 8-bit micros
+            such
             as
             PIC or Atmel, through to multicore 32bit and 64bit processors.<br><br>
 
             Having working knowledge of the major processors currently in use in the embedded world such as Arm, X86,
-            PowerPC and various DSP cores.<br><br>
+            PowerPC and various DSP cores.
         </div>
-        <div class="design-heading ">Design and Implementation</div>
+        <div class="design-heading">Design and Implementation</div>
         <div class="sentences text-justify">We have extensive experience in designing and implementing real time
             embedded software. We prefer to design embedded software in UML, even if the code is to be implemented in
             languages that do not conform to the object oriented paradigm. We are happy to implement to either our
