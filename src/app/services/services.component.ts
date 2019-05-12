@@ -33,16 +33,15 @@ export class ServicesComponent implements OnInit {
       service_paragraph: 'We reduce the gap between the educational knowledge and the practical work field. We are here to cater the need of hard core electronics and embedded systems and infuse creative information into the mind set among new generations.',
     },
     {
-      icon_name: 'code',
+      icon_name: 'laptop',
       service_heading: 'Hardware Designing',
       service_paragraph: 'We have extensive experience in analogue and digital design, components selections, purchasing and assembly. Also at Botz we do extensive testing procedures on prototypes, products for both standards and regulatory.',
     },
     {
-      icon_name: 'laptop',
+      icon_name: 'code',
       service_heading: 'Software Designing',
       service_paragraph: 'We have extensive experience in designing and implementing real time embedded software.We prefer to design embedded software in UML, even if the code is to be implemented in languages that do not conform to the object oriented paradigm.',
     },
-
   ]
   constructor() { }
 
