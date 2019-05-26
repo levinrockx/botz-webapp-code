@@ -1,17 +1,17 @@
 .products-main {
   background-color: #dfe6e9;
-  padding-bottom: 54px !important;
+  padding-bottom: 4.5% !important;
 }
 .mainclass {
   margin-top: 200px;
   font-family: SourceCodeProBlack;
-  font-size: 50px;
-  padding-bottom: 50px;
+  font-size: 50px;//font size should be changed to rem
+  padding-bottom: 50px;//font size should be changed to rem
 }
 .card {
 //   height: 400px;
   padding: 1%;
-  margin-bottom: 50px;
+  margin-bottom: 50px;//font size should be changed to rem
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
   background-color: #ffffff;
   border-radius: 0px;
@@ -26,7 +26,7 @@
 }
 .mini {
   font-family: SourceCodeProBlack;
-  margin-bottom: 25px;
+  margin-bottom: 25px;//change px to %
   font-size: 1.563rem;
 }
 p {

@@ -5,7 +5,7 @@ import { ProductsComponent } from './products/products.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { ServicesComponent } from './services/services.component';
-import { BlogMainComponent } from './blog-main/blog-main.component';
+import { BlogarticleComponent } from './blog/blogarticle/blogarticle.component'
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -30,10 +30,10 @@ const routes: Routes = [
     component: ServicesComponent,
   },
   {
-    path: 'blog',
-    // redirectTo: 'BlogMainComponent',
+    path: 'blogarticle',
+    component: BlogarticleComponent,
+    // redirectTo: '',
     // pathMatch: 'full',
-    component: BlogMainComponent,
   },
   // { path: 'header', component: HeaderComponent, outlet: 'header'}
 ];

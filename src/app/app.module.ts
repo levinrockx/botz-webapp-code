@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { NguiMapModule } from '@ngui/map';
@@ -11,7 +12,7 @@ import { ProductsComponent } from './products/products.component';
 import { ServicesComponent } from './services/services.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
-import { BlogMainComponent } from './blog-main/blog-main.component';
+import { BlogarticleComponent } from './blog/blogarticle/blogarticle.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,11 +23,12 @@ import { BlogMainComponent } from './blog-main/blog-main.component';
     ServicesComponent,
     ContactComponent,
     FooterComponent,
-    BlogMainComponent,
+    BlogarticleComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     AngularFontAwesomeModule,
     NguiMapModule.forRoot({ apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyCiLrXdz4_P_D7f1g8PjqVvu2jtui_jHI0' }),
   ],
