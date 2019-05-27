@@ -1,0 +1,39 @@
+.blog-main {
+    margin-top: 30vh;
+  }
+  .tablinks {
+    width: 122px;
+    height: 45px;
+    background-color: white;
+    border: 0px;
+    width: 72px;
+    height: 25px;
+    font-family: SourceCodePro;
+    font-size: 15px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.9;
+    letter-spacing: normal;
+    text-align: right;
+    color: #000000;
+  }
+  .tab {
+    border-bottom:  solid 1px #707070;
+    margin-bottom: 5vh;
+    width: 100%;
+  }
+//   .tablinks:hover{
+//       background-color:  #dfe6e9; 
+//       border-top-right-radius: 7px;
+//       border-top-left-radius: 7px;
+//       border-bottom:black 2px solid;
+//   }
+  .tabselected{
+    background-color:  #dfe6e9; 
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+    border-bottom:black 2px solid;
+
+  }
+  

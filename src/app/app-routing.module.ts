@@ -6,6 +6,7 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { ServicesComponent } from './services/services.component';
 import { BlogarticleComponent } from './blog/blogarticle/blogarticle.component'
+import { BlogMainComponent } from './blog/blog-main/blog-main.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -32,6 +33,12 @@ const routes: Routes = [
   {
     path: 'blogarticle',
     component: BlogarticleComponent,
+    // redirectTo: '',
+    // pathMatch: 'full',
+  },
+  {
+    path: 'blog',
+    component: BlogMainComponent,
     // redirectTo: '',
     // pathMatch: 'full',
   },

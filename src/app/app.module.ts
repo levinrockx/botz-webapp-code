@@ -13,6 +13,10 @@ import { ServicesComponent } from './services/services.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { BlogarticleComponent } from './blog/blogarticle/blogarticle.component';
+import { BlogMainComponent } from './blog/blog-main/blog-main.component';
+import { BlogAllComponent } from './blog/blog-all/blog-all.component';
+import { BlogLatestComponent } from './blog/blog-latest/blog-latest.component';
+import { BlogSearchComponent } from './blog/blog-search/blog-search.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +28,10 @@ import { BlogarticleComponent } from './blog/blogarticle/blogarticle.component';
     ContactComponent,
     FooterComponent,
     BlogarticleComponent,
+    BlogMainComponent,
+    BlogAllComponent,
+    BlogLatestComponent,
+    BlogSearchComponent,
   ],
   imports: [
     BrowserModule,
