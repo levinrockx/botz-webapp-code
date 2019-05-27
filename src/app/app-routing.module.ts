@@ -44,7 +44,7 @@ const routes: Routes = [
     // pathMatch: 'full',
   },
   {
-    path: 'blog/login',
+    path: 'login',
     component: LogInComponent,
   },
   // { path: 'header', component: HeaderComponent, outlet: 'header'}
