@@ -12,8 +12,7 @@ export class BlogMainComponent implements OnInit {
 
   ngOnInit() {
     this.TabSelected(0);
-    console.log("hello");
-  }
+    }
   TabSelected(index) {
     this.selectedTab = index;
   }

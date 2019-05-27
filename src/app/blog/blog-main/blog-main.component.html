@@ -2,12 +2,18 @@
   <div class="container">
     <div class="row p-0 m-0">
       <div class="tab">
-        <button class="tablinks" [ngClass]="{'tabSelected' : selectedTab==0}" (mouseover)="TabSelected(0)"  style="padding-right:3vh">All</button>
-        <button class="tablinks" [ngClass]="{'tabSelected' : selectedTab==1}" (mouseover)="TabSelected(1)">Latest</button>
-        <button class="tablinks" [ngClass]="{'tabSelected' : selectedTab==2}" (mouseover)="TabSelected(2)">Search</button>
+        <button class="tablinks" [ngClass]="{'tabSelected' : selectedTab==0}" (click)="TabSelected(0)"  style="padding-right:3vh">All</button>
+        <button class="tablinks" [ngClass]="{'tabSelected' : selectedTab==1}" (click)="TabSelected(1)">Latest</button>
+        <button class="tablinks" [ngClass]="{'tabSelected' : selectedTab==2}" (click)="TabSelected(2)">Search</button>
       </div>
-      <div>
+      <div *ngIf="selectedTab==0">
         <app-blog-all></app-blog-all>
+      </div>
+      <div *ngIf="selectedTab==1">
+        <app-blog-latest></app-blog-latest>
+      </div>
+      <div *ngIf="selectedTab==2">
+        <app-blog-search></app-blog-search>
       </div>
       <div></div>
       <div></div>
