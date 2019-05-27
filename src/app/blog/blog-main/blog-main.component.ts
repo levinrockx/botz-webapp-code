@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogMainComponent implements OnInit {
   public selectedTab;
-
+  
   constructor() { }
 
   ngOnInit() {
