@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-blog-all',
   templateUrl: './blog-all.component.html',
@@ -38,12 +39,16 @@ export class BlogAllComponent implements OnInit {
       desc: "Lorem ipsum is a mockup text used for webdesign and other things..",
     },
   ];
-  constructor( private http: HttpClient,) { }
+
+  constructor(
+    private http: HttpClient,
+    private router: Router
+  ) { }
 
   ngOnInit() {
-    
   }
-  
-  
-  
+
+  reRoute(routeName) {
+    this.router.navigate([routeName]);
+  }
 }
