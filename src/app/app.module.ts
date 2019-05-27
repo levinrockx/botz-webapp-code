@@ -17,6 +17,7 @@ import { BlogMainComponent } from './blog/blog-main/blog-main.component';
 import { BlogAllComponent } from './blog/blog-all/blog-all.component';
 import { BlogLatestComponent } from './blog/blog-latest/blog-latest.component';
 import { BlogSearchComponent } from './blog/blog-search/blog-search.component';
+import { LogInComponent } from './blog-admin/log-in/log-in.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +33,7 @@ import { BlogSearchComponent } from './blog/blog-search/blog-search.component';
     BlogAllComponent,
     BlogLatestComponent,
     BlogSearchComponent,
+    LogInComponent,
   ],
   imports: [
     BrowserModule,
