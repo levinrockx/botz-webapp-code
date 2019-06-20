@@ -35,7 +35,7 @@ ul {
       width: 0px;
       height: 0px;
       margin-right: 2px;
-      background-color: #ed3833;
+      background-color: #ffffff;
       content: '';
       display: inline-flex;
       vertical-align: middle; 
@@ -44,6 +44,7 @@ ul {
   li:hover {
     color: #ed3833;
     &:before {
+      background-color: #ed3833;
       transition: all 0.25s cubic-bezier(0.37, 0.31, 0.2, 0.85);
       width: 12px;
       height: 1px;
