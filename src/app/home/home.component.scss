@@ -15,6 +15,9 @@
   width: 580px;
   position: absolute;
   top: 0px;
+  .banner-text{
+    margin-bottom: 50px;
+  }
   h1 {
     font-family: SourceCodeProBlack;
     position: relative;
@@ -24,10 +27,9 @@
     font-size: 80px;
     margin: 0;
   }
-  .hidetext{
+  .hidetext {
     position: absolute;
     z-index: 200;
-   
   }
   p {
     font-family: SourceCodeProLight;
