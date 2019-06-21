@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
       this.rowThree.nativeElement], 1,
       {
         y: '100%',
-        ease: Expo.easeInOut,
+        ease: Power4.easeOut,
         delay:0.3
       }, 0.5);
   }
