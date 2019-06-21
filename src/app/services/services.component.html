@@ -1,8 +1,8 @@
-<div class="container service-main">
-    <div class="service-heading">Our Services</div>
-    <div class="col-12 row m-0 p-0 main-card">
+<div class="container service-main " #containerOne>
+    <div class="service-heading" #heading>Our Services</div>
+    <div class="col-12 row m-0 p-0 main-card" #main>
         <div class="col-5 p-0">
-            <div class="col-12 row p-0 m-0 services-tab" [ngClass]="{'selected-tab' : selectedTab == 0}" (mouseover)="serviceSelected(0)">
+            <div class="col-12 row p-0 m-0 services-tab"  [ngClass]="{'selected-tab' : selectedTab == 0}" (mouseover)="serviceSelected(0)">
                 <div class="col-2 p-0 m-0">
                     <div class="tab-icon">
                         <fa name="pencil" size="2x"></fa>
@@ -87,14 +87,14 @@
     </div>
 </div>
 <div class="skillset-main">
-    <div class="container">
-        <div class="skill-heading">Our Skill Set</div>
+    <div class="container" #containerTwo>
+        <div class="skill-heading" #skillHead>Our Skill Set</div>
         <div class="firstline text-justify">BOTZ has vast experience in various technologies needed to develop a
             successful embedded
             systems project this
             includes:<br><br>
         </div>
-        <div class="sentences text-justify">
+        <div class="sentences text-justify" #paraOne>
             In depth knowledge of various programming languages such as C, C++,C#, Java and PHP.<br><br>
 
             Working to industry standards such as MISRA C1 '&'amp; C2, MISRA C++:2008 and JSF C++ Coding
@@ -112,8 +112,8 @@
             Having working knowledge of the major processors currently in use in the embedded world such as Arm, X86,
             PowerPC and various DSP cores.
         </div>
-        <div class="design-heading">Design and Implementation</div>
-        <div class="sentences text-justify">
+        <div class="design-heading" #designHead>Design and Implementation</div>
+        <div class="sentences text-justify" #paraTwo>
             We have extensive experience in designing and implementing real time
             embedded software. We prefer to design embedded software in UML, even if the code is to be implemented in
             languages that do not conform to the object oriented paradigm. We are happy to implement to either our
