@@ -40,10 +40,10 @@
   // display: inline;
   // transform: translateY(-16px) !important;
   animation-name: heartbeat;
-  animation-duration: 1.3s;
+  animation-duration: 1s;
   font-size: 25px;
   animation-iteration-count: infinite;
-  
+  animation-timing-function: ease-in;
 }
 @keyframes heartbeat {
   from {
