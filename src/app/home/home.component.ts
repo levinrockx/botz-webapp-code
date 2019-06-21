@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit {
         y: '100%',
         ease: Expo.easeInOut,
         delay:0.3
-      }, 0.2);
+      }, 0.5);
   }
 
   getBlogAll() {
