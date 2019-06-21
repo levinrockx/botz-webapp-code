@@ -1,4 +1,7 @@
 .footer-main {
+  position: fixed;
+  bottom: 0;
+  z-index: -1;
   // position: absolute;
   // bottom: 0px;
   background-color: #272626;
@@ -6,9 +9,11 @@
   margin: 0px;
   padding: 0px;
   height: 600px;
+  width: 100%;
   color: white;
   font-size: 0.8rem;
   border-bottom: 10px solid #ed3833;
+  box-shadow: inset 0px 3px 5px 0px #000000;
 }
 .footer-content {
   margin-top: 198px;
