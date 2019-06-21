@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit {
       {
         y: '100%',
         ease: Expo.easeInOut,
-        delay:1
+        delay:0.3
       }, 0.2);
   }
 
