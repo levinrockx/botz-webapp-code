@@ -1,5 +1,11 @@
 .version-main {
   height: 100vh;
+  background-color: #ffffff;
+  // ux changes for footer
+  margin-bottom: 600px !important;
+  box-shadow: 1px 14px 15px 2px #00000069;
+  border-bottom-left-radius: 2.7px;
+  border-bottom-right-radius: 2.7px;
 }
 .heading {
   font-size: 50px;
@@ -15,4 +21,40 @@
 }
 .credit-text {
   font-family: SourceCodeProLight;
+}
+.left-text {
+  display: inline;
+}
+.right-text {
+  margin-left: 40px;
+  display: inline;
+}
+.icon-wrapper{
+  transform: translateY(-6px);
+  display: inline;
+  position: absolute;
+  margin-left: 3px;
+}
+.heart-icon {
+  color: #ed3833;
+  // display: inline;
+  // transform: translateY(-16px) !important;
+  animation-name: heartbeat;
+  animation-duration: 1.3s;
+  font-size: 25px;
+  animation-iteration-count: infinite;
+  
+}
+@keyframes heartbeat {
+  from {
+    font-size: 27px;
+    transform: scaleX(1.1);
+  }
+  to {
+    font-size: 25px;
+    transform: scaleX(1.01);
+  }
+}
+.team-name{
+  font-family: SourceCodePro;
 }
