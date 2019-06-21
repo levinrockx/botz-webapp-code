@@ -9,6 +9,8 @@ declare var TweenMax: any;
 })
 export class ServicesComponent implements OnInit {
   @ViewChild('containerOne', { static: true }) containerOne: ElementRef;
+  @ViewChild('rowOne', { static: true }) rowOne: ElementRef;
+  @ViewChild('rowTwo', { static: true }) rowTwo: ElementRef;
   @ViewChild('heading', { static: true }) heading: ElementRef;
   @ViewChild('main', { static: true }) main: ElementRef;
   @ViewChild('skillHead', { static: true }) skillHead: ElementRef;
@@ -68,8 +70,8 @@ export class ServicesComponent implements OnInit {
     this.service_paragraph = this.service_obj[index].service_paragraph;
   }
   startAnimation() {
-    TweenMax.fromTo(this.containerTwo.nativeElement, 1, { opacity: 1, top: -2000 }, { top: 0, ease: Expo.easeInOut });
-    TweenMax.fromTo(this.main.nativeElement, 1, { opacity: 0 }, { opacity: 1, delay: 1 });
+    TweenMax.fromTo(this.rowTwo.nativeElement, 1, { opacity: 1, top: -2000 }, { top: 0, ease: Expo.easeInOut });
+    TweenMax.fromTo(this.rowOne.nativeElement, 1, { opacity: 0 }, { opacity: 1, delay: 1 });
     TweenMax.fromTo(this.heading.nativeElement, 1, { y: 50 }, { y: 0, ease: Power3.easeOut, delay: 1 });
     TweenMax.fromTo(this.skillHead.nativeElement, 1, { y: 50 }, { y: 0, ease: Power3.easeOut, delay: 1 });
     TweenMax.fromTo(this.designHead.nativeElement, 1, { y: 50 }, { y: 0, ease: Power3.easeOut, delay: 1 });

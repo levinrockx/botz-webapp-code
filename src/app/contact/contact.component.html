@@ -1,10 +1,10 @@
 <div class="row p-0 m-0">
   <div class="container contact-main text-center">
-    <div class="contact-heading">
+    <div class="contact-heading" #head>
       Contact Us
     </div>
     <div class="col-12 row p-0 m-0">
-      <div class="col-12 pl-0 m-0 left-main">
+      <div class="col-12 pl-0 m-0 left-main" #para>
         Botz Embedded Solutions Pvt Ltd<br><br>
 
         3rd floor, Kallyani Tower,<br>
@@ -16,44 +16,45 @@
         <fa name="envelope"></fa> info@botz.co.in<br>
         <fa name="phone"></fa> 0484-4860077
       </div>
-      <div class="col-6 pr-0 m-0 text-right right-main">
-        For enquiry of projects and free technical support<br>
-        submit your queries here:
-        <div class="contact-form">
-          <div class="col-12 row p-0 m-0 contact-item">
-            <div class="form-label col-3 p-0 m-0">
-              Name :
-            </div>
-            <div class="form-label col-9 p-0 m-0">
-              <input class="cust-input" type="text" placeholder="Enter your name">
-            </div>
+    </div>
+    <div class="col-6 pr-0 m-0 text-right right-main" #para>
+      For enquiry of projects and free technical support<br>
+      submit your queries here:
+      <div class="contact-form">
+        <div class="col-12 row p-0 m-0 contact-item">
+          <div class="form-label col-3 p-0 m-0">
+            Name :
           </div>
-          <div class="col-12 row p-0 m-0 contact-item">
-            <div class="form-label col-3 p-0 m-0">
-              Email :
-            </div>
-            <div class="form-label col-9 p-0 m-0">
-              <input class="cust-input" type="email" placeholder="Enter your email id">
-            </div>
+          <div class="form-label col-9 p-0 m-0">
+            <input class="cust-input" type="text" placeholder="Enter your name">
           </div>
-          <div class="col-12 row p-0 m-0 contact-item">
-            <div class="form-label col-3 p-0 m-0">
-              Message :
-            </div>
-            <div class="form-label col-9 p-0 m-0">
-              <textarea class="cust-input" placeholder="Type your message"></textarea>
-            </div>
+        </div>
+        <div class="col-12 row p-0 m-0 contact-item">
+          <div class="form-label col-3 p-0 m-0">
+            Email :
           </div>
-          <div class="col-12 row p-0 m-0 contact-item">
-            <div class="form-label col-3 p-0 m-0">
-            </div>
-            <div class="form-label col-9 p-0 m-0">
-              <button class="btn regular-btn pull-right">submit</button>
-            </div>
+          <div class="form-label col-9 p-0 m-0">
+            <input class="cust-input" type="email" placeholder="Enter your email id">
+          </div>
+        </div>
+        <div class="col-12 row p-0 m-0 contact-item">
+          <div class="form-label col-3 p-0 m-0">
+            Message :
+          </div>
+          <div class="form-label col-9 p-0 m-0">
+            <textarea class="cust-input" placeholder="Type your message"></textarea>
+          </div>
+        </div>
+        <div class="col-12 row p-0 m-0 contact-item">
+          <div class="form-label col-3 p-0 m-0">
+          </div>
+          <div class="form-label col-9 p-0 m-0">
+            <button class="btn regular-btn pull-right">submit</button>
           </div>
         </div>
       </div>
     </div>
+
   </div>
 </div>
 <ngui-map zoom="18" center="9.998590,76.296914">
