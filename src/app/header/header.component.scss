@@ -42,11 +42,11 @@
   width: 122px;
   padding: 35px 16px 0px;
   height: 100px;
-  transition: 0.5s;
+  transition: all 0.25s cubic-bezier(0.37, 0.31, 0.2, 0.85);
   font-size: 0.8rem;
 }
 .nav-link:hover{
-  transition: 0.5s;
+  transition: all 0.25s cubic-bezier(0.37, 0.31, 0.2, 0.85);
   background-color: #ED3833;
   // border-bottom: 10px solid #ffffff;
   cursor: pointer;
