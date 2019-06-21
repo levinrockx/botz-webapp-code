@@ -8,7 +8,7 @@ import { ServicesComponent } from './services/services.component';
 import { BlogarticleComponent } from './blog/blogarticle/blogarticle.component'
 import { BlogMainComponent } from './blog/blog-main/blog-main.component';
 import { LogInComponent } from './blog-admin/log-in/log-in.component';
-import { VersionComponent } from './version/version/version.component';
+import { VersionComponent } from './version/version.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
