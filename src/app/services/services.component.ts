@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Power3, Back, Expo } from 'gsap/all';
+declare var TweenMax: any;
 
 @Component({
   selector: 'app-services',
@@ -6,6 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./services.component.scss']
 })
 export class ServicesComponent implements OnInit {
+  @ViewChild('containerOne', { static: true }) containerOne: ElementRef;
+  @ViewChild('rowOne', { static: true }) rowOne: ElementRef;
+  @ViewChild('rowTwo', { static: true }) rowTwo: ElementRef;
+  @ViewChild('heading', { static: true }) heading: ElementRef;
+  @ViewChild('main', { static: true }) main: ElementRef;
+  @ViewChild('skillHead', { static: true }) skillHead: ElementRef;
+  @ViewChild('paraOne', { static: true }) paraOne: ElementRef;
+  @ViewChild('designHead', { static: true }) designHead: ElementRef;
+  @ViewChild('paraTwo', { static: true }) paraTwo: ElementRef;
+  @ViewChild('containerTwo', { static: true }) containerTwo: ElementRef;
+
 
   public icon_name;
   public service_heading;
@@ -47,6 +60,7 @@ export class ServicesComponent implements OnInit {
 
   ngOnInit() {
     this.serviceSelected(0);
+    this.startAnimation();
   }
 
   serviceSelected(index) {
@@ -54,6 +68,16 @@ export class ServicesComponent implements OnInit {
     this.icon_name = this.service_obj[index].icon_name;
     this.service_heading = this.service_obj[index].service_heading;
     this.service_paragraph = this.service_obj[index].service_paragraph;
+  }
+  startAnimation() {
+    TweenMax.fromTo(this.rowTwo.nativeElement, 1, { opacity: 1, top: -2000 }, { top: 0, ease: Expo.easeInOut });
+    TweenMax.fromTo(this.rowOne.nativeElement, 1, { opacity: 0 }, { opacity: 1, delay: 1 });
+    TweenMax.fromTo(this.heading.nativeElement, 1, { y: 50 }, { y: 0, ease: Power3.easeOut, delay: 1 });
+    TweenMax.fromTo(this.skillHead.nativeElement, 1, { y: 50 }, { y: 0, ease: Power3.easeOut, delay: 1 });
+    TweenMax.fromTo(this.designHead.nativeElement, 1, { y: 50 }, { y: 0, ease: Power3.easeOut, delay: 1 });
+    TweenMax.fromTo(this.paraOne.nativeElement, 1, { y: 100 }, { y: 0, ease: Power3.easeOut, delay: 1 });
+    TweenMax.fromTo(this.paraTwo.nativeElement, 1, { y: 100 }, { y: 0, ease: Power3.easeOut, delay: 1 });
+    TweenMax.fromTo(this.containerTwo.nativeElement, 1, { opacity: 0 }, { opacity: 1, ease: Power3.easeOut, delay: 1 });
   }
 
 }
