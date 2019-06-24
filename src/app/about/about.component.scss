@@ -1,6 +1,5 @@
 .first-row {
   background-color: #ffffff;
-  opacity: 0;
 }
 .about-main {
   margin-top: 200px;
@@ -18,12 +17,17 @@ p {
   padding-bottom: 58px;
 }
 .our-team-main {
-  opacity: 0;
   background-color: #dfe6e9;
+
+  // ux changes for footer
+  margin-bottom: 600px !important;
+  box-shadow: 1px 14px 15px 2px #00000069;
+  border-bottom-left-radius: 2.7px;
+  border-bottom-right-radius: 2.7px;
 }
-.secon-container{
-  opacity: 0;
-}
+// .secon-container {
+//   opacity: 0;
+// }
 .team-heading {
   margin-top: 100px;
 }
@@ -31,7 +35,7 @@ p {
   padding-bottom: 72.6px !important;
 }
 .team-rows:last-child {
-  padding-bottom: 100px !important;
+  padding-bottom: 150px !important;
 }
 .team-thumb-img {
   width: 100%;

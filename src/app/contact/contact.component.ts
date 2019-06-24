@@ -19,10 +19,10 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
     this.startAnimation();
   }
-startAnimation() {
-  TweenMax.fromTo(this.head.nativeElement, 1, { y: 50 }, { y: 0, ease: Power3.easeOut, delay: 0 });
-  // TweenMax.fromTo(this.head.nativeElement, 1, { opacity: 1, top: -2000 }, { top: 0, ease: Expo.easeInOut });
-  TweenMax.fromTo(this.para.nativeElement, 1, { y: 100 }, { y: 0, ease: Power3.easeOut, delay: 0 });
-  TweenMax.fromTo(this.containerOne.nativeElement, 1, { opacity: 0 }, { opacity: 1, delay: 0 });
-}
+  startAnimation() {
+    TweenMax.fromTo(this.head.nativeElement, 1, { opacity: 0, y: 50 }, { opacity: 1, y: 0, ease: Power3.easeOut });
+    TweenMax.fromTo(this.para.nativeElement, 1, { opacity: 0, y: 100 }, { opacity: 1, y: 0, ease: Power3.easeOut, delay: 0.5 });
+    // TweenMax.fromTo(this.head.nativeElement, 1, { opacity: 1, top: -2000 }, { top: 0, ease: Expo.easeInOut });
+    // TweenMax.fromTo(this.containerOne.nativeElement, 1, { opacity: 0 }, { opacity: 1, delay: 0 });
+  }
 }

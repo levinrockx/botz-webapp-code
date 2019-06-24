@@ -1,7 +1,9 @@
+.contact-row-main {
+  background-color: #ffffff;
+}
 .contact-main {
   margin-top: 200px !important;
   padding-bottom: 54px !important;
- 
 }
 .contact-heading {
   font-family: SourceCodeProBlack;
@@ -26,7 +28,13 @@
 .contact-item {
   margin-bottom: 30px !important;
 }
-.right-main 
-{
+.right-main {
   display: none;
+}
+.map-row-main {
+  // ux changes for footer
+  margin-bottom: 600px !important;
+  box-shadow: 1px 14px 15px 2px #00000069;
+  border-bottom-left-radius: 2.7px;
+  border-bottom-right-radius: 2.7px;
 }

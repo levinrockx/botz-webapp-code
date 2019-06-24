@@ -1,7 +1,7 @@
-<div class="row col-md-12 p-0 m-0" #rowOne>
+<div class="row col-md-12 p-0 m-0 service-row-one" #rowOne>
     <div class="container service-main " #containerOne>
         <div class="service-heading" #heading>Our Services</div>
-        <div class="col-12 row m-0 p-0 main-card" #main>
+        <div class="col-12 row m-0 p-0 main-card" #serviceCard>
             <div class="col-5 p-0">
                 <div class="col-12 row p-0 m-0 services-tab" [ngClass]="{'selected-tab' : selectedTab == 0}"
                     (mouseover)="serviceSelected(0)">

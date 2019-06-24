@@ -1,3 +1,6 @@
+.service-row-one {
+  background-color: #ffffff;
+}
 .service-main {
   margin-top: 200px;
   padding-bottom: 100px;
@@ -38,7 +41,7 @@
   right: 0;
 }
 .right-text {
-  .right-content{
+  .right-content {
     width: 70%;
     margin: auto auto !important;
     padding-top: 10%;
@@ -50,12 +53,18 @@
     font-size: 50px;
     padding-bottom: 50px;
   }
-  p{
+  p {
     text-align: justify;
   }
 }
 .skillset-main {
   background-color: #dfe6e9;
+
+  // ux changes for footer
+  margin-bottom: 600px !important;
+  box-shadow: 1px 14px 15px 2px #00000069;
+  border-bottom-left-radius: 2.7px;
+  border-bottom-right-radius: 2.7px;
 }
 .skill-heading {
   font-size: 50px;
@@ -72,10 +81,10 @@
   color: #7e7777;
   line-height: 1.9;
 }
-.sentences:last-child{
+.sentences:last-child {
   font-family: SourceCodePro;
   color: #000000;
-  padding-bottom: 100px;
+  padding-bottom: 150px;
 }
 .design-heading {
   font-size: 50px;
