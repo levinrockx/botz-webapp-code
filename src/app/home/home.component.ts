@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit {
       {
         y: '100%',
         ease: Power4.easeOut,
-        delay:0.3
+        delay: 0.3
       }, 0.5);
   }
 

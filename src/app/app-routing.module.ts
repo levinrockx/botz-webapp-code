@@ -54,7 +54,7 @@ const routes: Routes = [
     component: VersionComponent,
   },
   {
-    path: '**', redirectTo: 'pageNotFound',pathMatch: 'full'
+    path: '**', redirectTo: 'pageNotFound', pathMatch: 'full'
   },
   {
     path: 'pageNotFound',
@@ -64,7 +64,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],
+  imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -53,7 +53,7 @@ export class ProductsComponent implements OnInit {
         opacity: 1,
         y: 0,
         ease: Power4.easeOut,
-        delay:0.5
+        delay: 0.5
       }, 0.5);
     // TweenMax.fromTo(this.head.nativeElement, 1, { y: 50 }, { y: 0, ease: Power4.easeOut, delay: 1 });
     // TweenMax.fromTo(this.designHead.nativeElement, 1, { y: 50 }, { y: 0, ease: Power4.easeOut, delay: 1 });

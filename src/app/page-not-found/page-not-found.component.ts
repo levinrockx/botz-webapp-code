@@ -18,7 +18,7 @@ export class PageNotFoundComponent implements OnInit {
 
   startAnimation() {
     TweenMax.fromTo(this.icon.nativeElement, 1, { opacity: 0, y: 100 }, { opacity: 1, y: 0, ease: Power4.easeOut });
-    TweenMax.fromTo(this.heading.nativeElement, 1, { opacity: 0, y: 50 }, { opacity: 1, y: 0, ease: Power4.easeOut});
+    TweenMax.fromTo(this.heading.nativeElement, 1, { opacity: 0, y: 50 }, { opacity: 1, y: 0, ease: Power4.easeOut });
     TweenMax.fromTo(this.content.nativeElement, 1, { opacity: 0, y: 100 }, { opacity: 1, y: 0, ease: Power4.easeOut, delay: 0.5 });
   }
 
