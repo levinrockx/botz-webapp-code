@@ -1,5 +1,5 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
-import { Power3, Back, Expo } from 'gsap/all';
+import { Power4, Back, Expo } from 'gsap/all';
 declare var TweenMax: any;
 @Component({
   selector: 'app-version',
@@ -19,10 +19,10 @@ export class VersionComponent implements OnInit {
   }
 
   startAnimation() {
-    TweenMax.fromTo(this.headingOne.nativeElement, 1, { opacity: 0, y: 50 }, { opacity: 1, y: 0, ease: Power3.easeOut });
-    TweenMax.fromTo(this.contentOne.nativeElement, 1, { opacity: 0, y: 100 }, { opacity: 1, y: 0, ease: Power3.easeOut, delay: 0.5 });
-    TweenMax.fromTo(this.headingTwo.nativeElement, 1, { opacity: 0, y: 50 }, { opacity: 1, y: 0, ease: Power3.easeOut, delay: 1 });
-    TweenMax.fromTo(this.contentTwo.nativeElement, 1, { opacity: 0, y: 100 }, { opacity: 1, y: 0, ease: Power3.easeOut, delay: 1.5 });
+    TweenMax.fromTo(this.headingOne.nativeElement, 1, { opacity: 0, y: 50 }, { opacity: 1, y: 0, ease: Power4.easeOut });
+    TweenMax.fromTo(this.contentOne.nativeElement, 1, { opacity: 0, y: 100 }, { opacity: 1, y: 0, ease: Power4.easeOut, delay: 0.5 });
+    TweenMax.fromTo(this.headingTwo.nativeElement, 1, { opacity: 0, y: 50 }, { opacity: 1, y: 0, ease: Power4.easeOut, delay: 1 });
+    TweenMax.fromTo(this.contentTwo.nativeElement, 1, { opacity: 0, y: 100 }, { opacity: 1, y: 0, ease: Power4.easeOut, delay: 1.5 });
   }
 
 }

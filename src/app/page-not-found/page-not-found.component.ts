@@ -1,5 +1,5 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
-import { Power3, Back, Expo } from 'gsap/all';
+import { Power4, Back, Expo } from 'gsap/all';
 declare var TweenMax: any;
 @Component({
   selector: 'app-page-not-found',
@@ -17,9 +17,9 @@ export class PageNotFoundComponent implements OnInit {
   }
 
   startAnimation() {
-    TweenMax.fromTo(this.icon.nativeElement, 1, { opacity: 0, y: 100 }, { opacity: 1, y: 0, ease: Power3.easeOut });
-    TweenMax.fromTo(this.heading.nativeElement, 1, { opacity: 0, y: 50 }, { opacity: 1, y: 0, ease: Power3.easeOut});
-    TweenMax.fromTo(this.content.nativeElement, 1, { opacity: 0, y: 100 }, { opacity: 1, y: 0, ease: Power3.easeOut, delay: 0.5 });
+    TweenMax.fromTo(this.icon.nativeElement, 1, { opacity: 0, y: 100 }, { opacity: 1, y: 0, ease: Power4.easeOut });
+    TweenMax.fromTo(this.heading.nativeElement, 1, { opacity: 0, y: 50 }, { opacity: 1, y: 0, ease: Power4.easeOut});
+    TweenMax.fromTo(this.content.nativeElement, 1, { opacity: 0, y: 100 }, { opacity: 1, y: 0, ease: Power4.easeOut, delay: 0.5 });
   }
 
 }
