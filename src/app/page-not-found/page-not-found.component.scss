@@ -16,6 +16,15 @@
   font-family: SourceCodeProLight;
   padding-bottom: 50px;
 }
-.row-wrapper{
+.row-wrapper {
   margin-top: 200px !important;
+}
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.error-icon {
+  color: #ed3833;
+  font-size: 10rem;
 }
