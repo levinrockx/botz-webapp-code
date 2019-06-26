@@ -8,11 +8,39 @@
   border-bottom-left-radius: 2.7px;
   border-bottom-right-radius: 2.7px;
 }
+
 .mainclass {
   margin-top: 200px;
   font-family: SourceCodeProBlack;
   font-size: 50px; //font size should be changed to rem
   padding-bottom: 50px; //font size should be changed to rem
+}
+.img-col {
+  height: 100%;
+  margin: auto 0px !important;
+}
+.mini {
+  font-family: SourceCodeProBlack;
+  margin-bottom: 25px; //change px to %
+  font-size: 1.563rem;
+}
+@media (min-width: 320px) {
+  // .mainclass{
+  //   margin-top: 200px;
+  //   font-size: 2.18rem;
+  // }
+  .imag{
+    height: 220px;
+    width: 220px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .mini{
+    font-size: 1.45rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .card {
   //   height: 400px;
@@ -22,18 +50,14 @@
   background-color: #ffffff;
   border-radius: 0px;
 }
-.img-col {
-  height: 100%;
-  margin: auto 0px !important;
-}
+
 .subone {
   font-size: 0.813rem;
   margin: auto 0;
 }
-.mini {
-  font-family: SourceCodeProBlack;
-  margin-bottom: 25px; //change px to %
-  font-size: 1.563rem;
+
+@media (min-width: 576px){
+  
 }
 p {
   text-align: justify;

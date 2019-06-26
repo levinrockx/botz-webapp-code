@@ -7,8 +7,16 @@
 }
 .contact-heading {
   font-family: SourceCodeProBlack;
-  font-size: 50px;
+  font-size: 3.125rem;
   padding-bottom: 50px !important;
+}
+@media (max-width: 343px) {
+  .contact-heading {
+    font-size: 3rem;
+  }
+  .botz{
+    font-size: 1rem;
+  }
 }
 .cust-input {
   width: 100%;
