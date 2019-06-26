@@ -34,7 +34,7 @@
   }
   p {
     font-family: SourceCodeProLight;
-    text-align: justify;
+    // text-align: justify;
     font-size: 0.8rem;
     width: 580px;
     margin-bottom: 18px;
@@ -119,4 +119,19 @@ video {
   padding-top: 88px;
   font-size: 1rem;
   font-family: SourceCodeProLight;
+}
+.arrow-icon-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 5px !important;
+}
+.down-arrow-icon {
+  color: #ffffff;
+  font-size: xx-large;
 }
