@@ -59,3 +59,11 @@ p {
 .team-info-designation {
   font-family: SourceCodeProLight;
 }
+@media (max-width: 768px) {
+  .team-rows {
+    padding-bottom: 0px !important;
+  }
+  .team-member {
+    padding-bottom: 10px !important;
+  }
+}
