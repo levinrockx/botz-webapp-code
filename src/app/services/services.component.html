@@ -2,15 +2,15 @@
     <div class="container service-main " #containerOne>
         <div class="service-heading" #heading>Our Services</div>
         <div class="col-12 row m-0 p-0 main-card" #serviceCard>
-            <div class="col-5 p-0">
+            <div class="col-2 col-lg-5  p-0">
                 <div class="col-12 row p-0 m-0 services-tab" [ngClass]="{'selected-tab' : selectedTab == 0}"
                     (mouseover)="serviceSelected(0)">
-                    <div class="col-2 p-0 m-0">
+                    <div class="col-12 col-lg-2 tab-icon-wrapper p-0 m-0 ">
                         <div class="tab-icon">
                             <fa name="pencil" size="2x"></fa>
                         </div>
                     </div>
-                    <div class="col-10 p-0 m-0">
+                    <div class="col-10 p-0 m-0 tab-text-wrapper">
                         <div class="tab-text">
                             PCB Designing
                         </div>
@@ -18,12 +18,12 @@
                 </div>
                 <div class="col-12 row p-0 m-0 services-tab" [ngClass]="{'selected-tab' : selectedTab == 1}"
                     (mouseover)="serviceSelected(1)">
-                    <div class="col-2 p-0 m-0">
+                    <div class="col-12 col-lg-2 tab-icon-wrapper p-0 m-0">
                         <div class="tab-icon">
                             <fa name="object-ungroup" size="2x"></fa>
                         </div>
                     </div>
-                    <div class="col-10 p-0 m-0">
+                    <div class="col-10 p-0 m-0 tab-text-wrapper">
                         <div class="tab-text">
                             Circuit Designing
                         </div>
@@ -31,12 +31,12 @@
                 </div>
                 <div class="col-12 row p-0 m-0 services-tab" [ngClass]="{'selected-tab' : selectedTab == 2}"
                     (mouseover)="serviceSelected(2)">
-                    <div class="col-2 p-0 m-0">
+                    <div class="col-12 col-lg-2 tab-icon-wrapper p-0 m-0">
                         <div class="tab-icon">
                             <fa name="connectdevelop" size="2x"></fa>
                         </div>
                     </div>
-                    <div class="col-10 p-0 m-0">
+                    <div class="col-10 p-0 m-0 tab-text-wrapper">
                         <div class="tab-text">
                             Embedded Programming
                         </div>
@@ -44,25 +44,25 @@
                 </div>
                 <div class="col-12 row p-0 m-0 services-tab" [ngClass]="{'selected-tab' : selectedTab == 3}"
                     (mouseover)="serviceSelected(3)">
-                    <div class="col-2 p-0 m-0">
+                    <div class="col-12 col-lg-2 tab-icon-wrapper p-0 m-0">
                         <div class="tab-icon">
                             <fa name="cogs" size="2x"></fa>
                         </div>
                     </div>
-                    <div class="col-10 p-0 m-0">
-                        <div class="tab-text">
+                    <div class="col-10 p-0 m-0 tab-text-wrapper">
+                        <div class="tab-text ">
                             Product Development
                         </div>
                     </div>
                 </div>
                 <div class="col-12 row p-0 m-0 services-tab" [ngClass]="{'selected-tab' : selectedTab == 4}"
                     (mouseover)="serviceSelected(4)">
-                    <div class="col-2 p-0 m-0">
+                    <div class="col-12 col-lg-2 tab-icon-wrapper p-0 m-0">
                         <div class="tab-icon">
                             <fa name="laptop" size="2x"></fa>
                         </div>
                     </div>
-                    <div class="col-10 p-0 m-0">
+                    <div class="col-10 p-0 m-0 tab-text-wrapper">
                         <div class="tab-text">
                             Hardware Designing
                         </div>
@@ -70,19 +70,19 @@
                 </div>
                 <div class="col-12 row p-0 m-0 services-tab" [ngClass]="{'selected-tab' : selectedTab == 5}"
                     (mouseover)="serviceSelected(5)">
-                    <div class="col-2 p-0 m-0">
+                    <div class="col-12 col-lg-2 tab-icon-wrapper p-0 m-0">
                         <div class="tab-icon">
                             <fa name="code" size="2x"></fa>
                         </div>
                     </div>
-                    <div class="col-10 p-0 m-0">
+                    <div class="col-10 p-0 m-0 tab-text-wrapper">
                         <div class="tab-text">
                             Software Designing
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-7 right-text">
+            <div class="col-10 col-lg-7 right-text">
                 <div class="right-content">
                     <fa class="right-icon" name="{{icon_name}}" size="3x"></fa>
                     <div class="right-heading">
