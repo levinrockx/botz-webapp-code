@@ -7,7 +7,6 @@ import { AboutComponent } from './about/about.component';
 import { ServicesComponent } from './services/services.component';
 import { BlogarticleComponent } from './blog/blogarticle/blogarticle.component'
 import { BlogMainComponent } from './blog/blog-main/blog-main.component';
-import { LogInComponent } from './blog-admin/log-in/log-in.component';
 import { VersionComponent } from './version/version.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
@@ -44,10 +43,6 @@ const routes: Routes = [
     component: BlogMainComponent,
     // redirectTo: '',
     // pathMatch: 'full',
-  },
-  {
-    path: 'login',
-    component: LogInComponent,
   },
   {
     path: 'version',

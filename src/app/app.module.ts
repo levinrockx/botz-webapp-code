@@ -17,9 +17,10 @@ import { BlogMainComponent } from './blog/blog-main/blog-main.component';
 import { BlogAllComponent } from './blog/blog-all/blog-all.component';
 import { BlogLatestComponent } from './blog/blog-latest/blog-latest.component';
 import { BlogSearchComponent } from './blog/blog-search/blog-search.component';
-import { LogInComponent } from './blog-admin/log-in/log-in.component';
 import { VersionComponent } from './version/version.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AdminDashboardHeaderComponent } from './admin-dashboard-header/admin-dashboard-header.component';
+import { BlogAdminDashboardComponent } from './blog-admin-dashboard/blog-admin-dashboard.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,9 +36,10 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     BlogAllComponent,
     BlogLatestComponent,
     BlogSearchComponent,
-    LogInComponent,
     VersionComponent,
     PageNotFoundComponent,
+    AdminDashboardHeaderComponent,
+    BlogAdminDashboardComponent,
   ],
   imports: [
     BrowserModule,
