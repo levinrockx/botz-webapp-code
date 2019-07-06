@@ -29,7 +29,7 @@
 .right-main {
   text-align: center;
 }
-.menu-icon-responsive-main{
+.menu-icon-responsive-main {
   display: none;
   color: #ffffff;
   align-items: center;
@@ -42,7 +42,7 @@
     cursor: pointer;
   }
 }
-.row-responsive-main{
+.row-responsive-main {
   display: none;
   position: fixed;
   margin-top: 190px; //reduce to 90px when done
@@ -50,8 +50,10 @@
   background-color: #000000;
   color: #ffffff;
   border-bottom: 10px solid #ed3833;
+  text-align: center;
+  padding-bottom: 100px !important;
 }
-.nav-link-responsive{
+.nav-link-responsive {
   transition: all 0.25s cubic-bezier(0.37, 0.31, 0.2, 0.85);
   font-size: 200%;
   font-family: SourceCodeProBlack;
@@ -66,10 +68,10 @@
   .right-main {
     display: none;
   }
-  .menu-icon-responsive-main{
+  .menu-icon-responsive-main {
     display: flex;
   }
-  .row-responsive-main{
-    display: initial;
+  .row-responsive-main-display {
+    display: initial !important;
   }
 }

@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin-dashboard-header.component.scss']
 })
 export class AdminDashboardHeaderComponent implements OnInit {
-
+  public flag: Boolean = false;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  showResponsiveMenu() {
+    this.flag = !this.flag;
   }
 
 }
