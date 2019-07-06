@@ -8,12 +8,20 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
+  public flag: Boolean = false;
   constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
   reRoute(routeName) {
+    if (this.flag) {
+      this.flag = false;
+    }
     this.router.navigate([routeName]);
+  }
+
+  showResponsiveMenu() {
+    this.flag = !this.flag;
   }
 }

@@ -18,7 +18,7 @@ import { BlogAllComponent } from './blog/blog-all/blog-all.component';
 import { BlogLatestComponent } from './blog/blog-latest/blog-latest.component';
 import { BlogSearchComponent } from './blog/blog-search/blog-search.component';
 import { LogInComponent } from './blog-admin/log-in/log-in.component';
-import { VersionComponent } from './version/version/version.component';
+import { VersionComponent } from './version/version.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 @NgModule({
   declarations: [

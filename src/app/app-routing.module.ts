@@ -8,7 +8,8 @@ import { ServicesComponent } from './services/services.component';
 import { BlogarticleComponent } from './blog/blogarticle/blogarticle.component'
 import { BlogMainComponent } from './blog/blog-main/blog-main.component';
 import { LogInComponent } from './blog-admin/log-in/log-in.component';
-import { VersionComponent } from './version/version/version.component';
+import { VersionComponent } from './version/version.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -52,11 +53,18 @@ const routes: Routes = [
     path: 'version',
     component: VersionComponent,
   },
+  {
+    path: '**', redirectTo: 'pageNotFound', pathMatch: 'full'
+  },
+  {
+    path: 'pageNotFound',
+    component: PageNotFoundComponent
+  },
   // { path: 'header', component: HeaderComponent, outlet: 'header'}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],
+  imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

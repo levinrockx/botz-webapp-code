@@ -8,6 +8,7 @@
   overflow: hidden;
   background-size: cover;
   z-index: -1;
+  background-color: #000000;
 }
 .banner-content {
   margin-top: 200px;
@@ -15,14 +16,25 @@
   width: 580px;
   position: absolute;
   top: 0px;
+  .banner-text {
+    margin-bottom: 50px;
+  }
   h1 {
     font-family: SourceCodeProBlack;
-    width: 432px;
+    position: relative;
+    overflow: hidden;
+    //width: 432px;
+    height: 100px;
     font-size: 80px;
+    margin: 0;
+  }
+  .hidetext {
+    position: absolute;
+    z-index: 200;
   }
   p {
     font-family: SourceCodeProLight;
-    text-align: justify;
+    // text-align: justify;
     font-size: 0.8rem;
     width: 580px;
     margin-bottom: 18px;
@@ -91,6 +103,12 @@ video {
   height: 500px;
   background-color: #dfe6e9;
   margin-top: 13vh;
+
+  // ux changes for footer
+  margin-bottom: 600px !important;
+  box-shadow: 1px 14px 15px 2px #00000069;
+  border-bottom-left-radius: 2.7px;
+  border-bottom-right-radius: 2.7px;
 }
 .mission-heading {
   padding-top: 100px;
@@ -101,4 +119,19 @@ video {
   padding-top: 88px;
   font-size: 1rem;
   font-family: SourceCodeProLight;
+}
+.arrow-icon-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 5px !important;
+}
+.down-arrow-icon {
+  color: #ffffff;
+  font-size: xx-large;
 }
