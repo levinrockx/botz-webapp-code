@@ -42,11 +42,34 @@
     cursor: pointer;
   }
 }
+.row-responsive-main{
+  display: none;
+  position: fixed;
+  margin-top: 190px; //reduce to 90px when done
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  border-bottom: 10px solid #ed3833;
+}
+.nav-link-responsive{
+  transition: all 0.25s cubic-bezier(0.37, 0.31, 0.2, 0.85);
+  font-size: 200%;
+  font-family: SourceCodeProBlack;
+  padding: 10px 10px !important;
+}
+.nav-link-responsive:hover {
+  transition: all 0.25s cubic-bezier(0.37, 0.31, 0.2, 0.85);
+  background-color: #ed3833;
+  cursor: pointer;
+}
 @media (max-width: 1199px) {
   .right-main {
     display: none;
   }
   .menu-icon-responsive-main{
     display: flex;
+  }
+  .row-responsive-main{
+    display: initial;
   }
 }
