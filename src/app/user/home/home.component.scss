@@ -1,0 +1,137 @@
+.banner-main {
+  height: 100vh;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  // background-image: url("../../assets/img/bg1.jpg");
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-size: cover;
+  z-index: -1;
+  background-color: #000000;
+}
+.banner-content {
+  margin-top: 200px;
+  color: #ffffff;
+  width: 580px;
+  position: absolute;
+  top: 0px;
+  .banner-text {
+    margin-bottom: 50px;
+  }
+  h1 {
+    font-family: SourceCodeProBlack;
+    position: relative;
+    overflow: hidden;
+    //width: 432px;
+    height: 100px;
+    font-size: 80px;
+    margin: 0;
+  }
+  .hidetext {
+    position: absolute;
+    z-index: 200;
+  }
+  p {
+    font-family: SourceCodeProLight;
+    // text-align: justify;
+    font-size: 0.8rem;
+    width: 580px;
+    margin-bottom: 18px;
+  }
+}
+.video-container-main {
+  // z-index: -1;
+  height: 100vh;
+  // overflow: hidden;
+}
+video {
+  width: 100vw;
+}
+// #bgVideo {
+// position: absolute;
+// top: calc(100vh - 1000px);
+// }
+// .cardbg{
+//     width: 399px;
+//     height: 463px;
+//     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+//     background-color: #ffffff;
+// }
+.blogs-cards-row {
+  background-color: #ffffff;
+}
+.blog-cards-main {
+  margin-top: 100px;
+  padding-bottom: 112px;
+}
+.blog-card {
+  // width: 399px;
+  height: 463px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  background-color: #ffffff;
+  padding: 0;
+  transition: 0.5s;
+}
+.blog-card:hover {
+  transition: 0.5s;
+  // box-shadow: 0 3px 6px 0 #ed38334f;
+  cursor: pointer;
+}
+.blog-img {
+  width: 100%;
+}
+.blog-card-text-main {
+  padding: 28px 13px 0px 13px;
+}
+.blog-text-date {
+  font-size: 14px;
+  color: #bebebe;
+  padding-bottom: 10px;
+}
+.blog-text-title {
+  font-size: 20px;
+  font-family: SourceCodeProBlack;
+  padding-bottom: 10px;
+}
+.blog-text-desc {
+  color: #bebebe;
+  padding-bottom: 10px;
+  font-size: 0.8rem;
+}
+.our-mission-main {
+  height: 500px;
+  background-color: #dfe6e9;
+  margin-top: 13vh;
+
+  // ux changes for footer
+  margin-bottom: 600px !important;
+  box-shadow: 1px 14px 15px 2px #00000069;
+  border-bottom-left-radius: 2.7px;
+  border-bottom-right-radius: 2.7px;
+}
+.mission-heading {
+  padding-top: 100px;
+  font-family: SourceCodeProBlack;
+  font-size: 50px;
+}
+.mission-text {
+  padding-top: 88px;
+  font-size: 1rem;
+  font-family: SourceCodeProLight;
+}
+.arrow-icon-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 5px !important;
+}
+.down-arrow-icon {
+  color: #ffffff;
+  font-size: xx-large;
+}

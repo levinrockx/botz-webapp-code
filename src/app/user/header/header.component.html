@@ -1,0 +1,59 @@
+<!-- <div class="homepage row">
+  <div class="rectangle ">
+    <div class="col-md-6 diva" align="center">
+      <img src="assets/img/Logo1.png" class="Logo1">
+     
+    </div>
+  </div>
+  </div> -->
+
+<div class="header-main">
+  <div class="container">
+    <div class="row">
+      <div class="col-6">
+        <img src="assets/img/Logo1 .png" class="header-logo" (click)="reRoute('/home')">
+      </div>
+      <div class="col-6 menu-icon-responsive-main">
+        <fa class="menu-icon-responsive" name="bars" size="2X" (click)="showResponsiveMenu()"></fa>
+      </div>
+      <div class="col-6 row navs-main p-0">
+        <div class="col-md-2"></div>
+        <div class="col-md-2"></div>
+        <div class="nav-link col-md-2" (click)="reRoute('/about')">
+          about
+        </div>
+        <div class="nav-link col-md-2" (click)="reRoute('/services')">
+          services
+        </div>
+        <div class="nav-link col-md-2" (click)="reRoute('/products')">
+          products
+        </div>
+        <!-- <div class="nav-link col-md-2" (click)="reRoute('/blog')">
+          blog
+        </div> -->
+        <div class="nav-link col-md-2" (click)="reRoute('/contact')">
+          contact
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="nav-responsive-main row p-0 m-0" [ngClass]="{'display-responsive-header' : flag}">
+  <div class="container">
+    <div class="nav-link-responsive col-12 text-center" (click)="reRoute('/about')">
+      about
+    </div>
+    <div class="nav-link-responsive col-12 text-center" (click)="reRoute('/services')">
+      services
+    </div>
+    <div class="nav-link-responsive col-12 text-center" (click)="reRoute('/products')">
+      products
+    </div>
+    <!-- <div class="nav-link-responsive col-12 text-center" (click)="reRoute('/blog')">
+      blog
+    </div> -->
+    <div class="nav-link-responsive col-12 text-center" (click)="reRoute('/contact')">
+      contact
+    </div>
+  </div>
+</div>

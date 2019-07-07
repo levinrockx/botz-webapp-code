@@ -1,0 +1,63 @@
+<div class="row banner-main">
+  <div class="video-container-main">
+    <video autoplay muted playsinline loop id="bgVideo">
+      <source src="assets/videos/bg1.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+  </div>
+  <div class="container">
+    <div class="banner-content">
+      <div class="banner-text">
+        <h1>
+          <div class="hidetext" #rowOne>Igniting</div>
+        </h1>
+        <h1>
+          <div class="hidetext" #rowTwo>Robotic</div>
+        </h1>
+        <h1>
+          <div class="hidetext" #rowThree>Minds</div>
+        </h1>
+      </div>
+      <!-- <p>
+        BOTZ EMBEDDED SOLUTIONS is a international multi- technology research and development center based in India,
+        providing full lifecycle embedded software and hardware development services. BOTZ specialises in creating
+        bespoke production grade embedded software systems.
+      </p> -->
+      <button class="btn ghost-btn" (click)="reRoute('/about')">Know more</button>
+    </div>
+    <div class="row p-0 m-0 arrow-icon-wrapper">
+      <fa class="down-arrow-icon" name="arrow-down"></fa>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="row col-12 p-0 m-0 blogs-cards-row">
+  <div class="container">
+    <div class="row blog-cards-main">
+      <div class="row col-12 m-0 p-0">
+        <div *ngFor="let card of cardList" class="col-4 p-4">
+          <div class="blog-card" (click)="reRoute('/blogarticle')">
+            <img src="assets/img/ec1.png" class="blog-img">
+            <div class="blog-card-text-main">
+              <div class="blog-text-date">{{card.date}}</div>
+              <div class="blog-text-title">{{card.title}}</div>
+              <div class="blog-text-desc">{{card.desc}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="row col-12 p-0 m-0 our-mission-main">
+  <div class="container">
+    <div class="mission-heading">
+      Our Mission
+    </div>
+    <div class="mission-text">
+      To work closely with customers, understand their requirements and then provide them the best solution
+      possible, ensuring the best quality and personalized service our customers expect to get.
+    </div>
+  </div>
+</div>
