@@ -2,8 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { VersionComponent } from './version/version.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { AdminDsahboardComponent } from './admin-dsahboard/admin-dsahboard.component';
-import { LoginModule } from './login/login.module';
 
 const routes: Routes = [
   {
@@ -14,16 +12,14 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./login/login.module').then(mod => mod.LoginModule)
   },
-
+  {
+    path: 'admin',
+    loadChildren: () => import('./dashboard/dashboard.module').then(mod => mod.DashboardModule)
+  },
   {
     path: 'version',
     component: VersionComponent,
   },
-  {
-    path: 'admin-dashboard',
-    component: AdminDsahboardComponent,
-  },
-
   {
     path: '**', redirectTo: 'pageNotFound', pathMatch: 'full'
   },

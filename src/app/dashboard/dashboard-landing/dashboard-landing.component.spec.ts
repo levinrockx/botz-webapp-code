@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BlogAdminDashboardComponent } from './blog-admin-dashboard.component';
+import { DashboardLandingComponent } from './dashboard-landing.component';
 
-describe('BlogAdminDashboardComponent', () => {
-  let component: BlogAdminDashboardComponent;
-  let fixture: ComponentFixture<BlogAdminDashboardComponent>;
+describe('DashboardLandingComponent', () => {
+  let component: DashboardLandingComponent;
+  let fixture: ComponentFixture<DashboardLandingComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BlogAdminDashboardComponent ]
+      declarations: [ DashboardLandingComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BlogAdminDashboardComponent);
+    fixture = TestBed.createComponent(DashboardLandingComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
