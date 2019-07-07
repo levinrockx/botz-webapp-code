@@ -5,10 +5,11 @@ import { ProductsComponent } from './products/products.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { ServicesComponent } from './services/services.component';
-import { BlogarticleComponent } from './blog/blogarticle/blogarticle.component'
+import { BlogarticleComponent } from './blog/blogarticle/blogarticle.component';
 import { BlogMainComponent } from './blog/blog-main/blog-main.component';
 import { VersionComponent } from './version/version.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AdminDsahboardComponent } from './admin-dsahboard/admin-dsahboard.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -49,12 +50,18 @@ const routes: Routes = [
     component: VersionComponent,
   },
   {
+    path: 'admin-dashboard',
+    component: AdminDsahboardComponent,
+  },
+
+  {
     path: '**', redirectTo: 'pageNotFound', pathMatch: 'full'
   },
   {
     path: 'pageNotFound',
     component: PageNotFoundComponent
   },
+  
   // { path: 'header', component: HeaderComponent, outlet: 'header'}
 ];
 
