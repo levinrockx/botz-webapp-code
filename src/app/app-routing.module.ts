@@ -1,50 +1,33 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { ProductsComponent } from './products/products.component';
-import { ContactComponent } from './contact/contact.component';
-import { AboutComponent } from './about/about.component';
-import { ServicesComponent } from './services/services.component';
-import { BlogarticleComponent } from './blog/blogarticle/blogarticle.component';
-import { BlogMainComponent } from './blog/blog-main/blog-main.component';
+
 import { VersionComponent } from './version/version.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AdminDsahboardComponent } from './admin-dsahboard/admin-dsahboard.component';
+import { LoginModule } from './login/login.module';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  {
+    path: 'l',
+    loadChildren: () => import('./user/user.module').then(mod => mod.UserModule)
+  },
   {
     path: 'home',
-    component: HomeComponent,
+    loadChildren: () => import('./user/user.module').then(mod => mod.UserModule)
   },
   {
-    path: 'products',
-    component: ProductsComponent,
+    path: '',
+    loadChildren: () => import('./user/user.module').then(mod => mod.UserModule)
   },
   {
-    path: 'contact',
-    component: ContactComponent,
+    path: '',
+    loadChildren: () => import('./user/user.module').then(mod => mod.UserModule)
   },
   {
-    path: 'about',
-    component: AboutComponent,
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then(mod => mod.LoginModule)
   },
-  {
-    path: 'services',
-    component: ServicesComponent,
-  },
-  {
-    path: 'blogarticle',
-    component: BlogarticleComponent,
-    // redirectTo: '',
-    // pathMatch: 'full',
-  },
-  {
-    path: 'blog',
-    component: BlogMainComponent,
-    // redirectTo: '',
-    // pathMatch: 'full',
-  },
+
   {
     path: 'version',
     component: VersionComponent,
@@ -61,7 +44,7 @@ const routes: Routes = [
     path: 'pageNotFound',
     component: PageNotFoundComponent
   },
-  
+
   // { path: 'header', component: HeaderComponent, outlet: 'header'}
 ];
 
