@@ -8,18 +8,6 @@ import { LoginModule } from './login/login.module';
 
 const routes: Routes = [
   {
-    path: 'l',
-    loadChildren: () => import('./user/user.module').then(mod => mod.UserModule)
-  },
-  {
-    path: 'home',
-    loadChildren: () => import('./user/user.module').then(mod => mod.UserModule)
-  },
-  {
-    path: '',
-    loadChildren: () => import('./user/user.module').then(mod => mod.UserModule)
-  },
-  {
     path: '',
     loadChildren: () => import('./user/user.module').then(mod => mod.UserModule)
   },

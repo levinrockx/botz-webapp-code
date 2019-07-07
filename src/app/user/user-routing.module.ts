@@ -10,47 +10,57 @@ import { BlogMainComponent } from './blog/blog-main/blog-main.component';
 import { UserLandingComponent } from './user-landing/user-landing.component';
 
 const routes: Routes = [
+  // {
+  //   path: '',
+  //   redirectTo: 'home',
+  //   pathMatch: 'full',
+  // },
+  // {
+  //   path: 'landing',
+  //   component: UserLandingComponent,
+  // },
+  // {
+  //   path: 'home',
+  //   component: HomeComponent,
+  // },
+  // {
+  //   path: 'products',
+  //   component: ProductsComponent,
+  // },
+  // {
+  //   path: 'contact',
+  //   component: ContactComponent,
+  // },
+  // {
+  //   path: 'about',
+  //   component: AboutComponent,
+  // },
+  // {
+  //   path: 'services',
+  //   component: ServicesComponent,
+  // },
+  // {
+  //   path: 'blogarticle',
+  //   component: BlogarticleComponent,
+  //   // redirectTo: '',
+  //   // pathMatch: 'full',
+  // },
+  // {
+  //   path: 'blog',
+  //   component: BlogMainComponent,
+  //   // redirectTo: '',
+  //   // pathMatch: 'full',
+  // },
   {
     path: '',
-    redirectTo: 'landing',
-    pathMatch: 'full',
-  },
-  {
-    path: 'landing',
     component: UserLandingComponent,
-  },
-  {
-    path: 'home',
-    component: HomeComponent,
-  },
-  {
-    path: 'products',
-    component: ProductsComponent,
-  },
-  {
-    path: 'contact',
-    component: ContactComponent,
-  },
-  {
-    path: 'about',
-    component: AboutComponent,
-  },
-  {
-    path: 'services',
-    component: ServicesComponent,
-  },
-  {
-    path: 'blogarticle',
-    component: BlogarticleComponent,
-    // redirectTo: '',
-    // pathMatch: 'full',
-  },
-  {
-    path: 'blog',
-    component: BlogMainComponent,
-    // redirectTo: '',
-    // pathMatch: 'full',
-  },
+    children: [
+      {
+        path: 'home',
+        component: HomeComponent,
+      }
+    ]
+  }
 ];
 
 @NgModule({
