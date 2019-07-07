@@ -14,10 +14,11 @@ import { BlogLatestComponent } from './blog/blog-latest/blog-latest.component';
 import { BlogSearchComponent } from './blog/blog-search/blog-search.component';
 import { UserRoutingModule } from './user-routing.module';
 import { UserLandingComponent } from './user-landing/user-landing.component';
-
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { NguiMapModule } from '@ngui/map';
 @NgModule({
-  declarations: [UserLandingComponent],
-  imports: [
+  declarations: [
+    UserLandingComponent,
     HeaderComponent,
     HomeComponent,
     AboutComponent,
@@ -29,9 +30,13 @@ import { UserLandingComponent } from './user-landing/user-landing.component';
     BlogMainComponent,
     BlogAllComponent,
     BlogLatestComponent,
-    BlogSearchComponent,
+    BlogSearchComponent
+  ],
+  imports: [
+    UserRoutingModule,
     CommonModule,
-    UserRoutingModule
+    NguiMapModule.forRoot({ apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyCiLrXdz4_P_D7f1g8PjqVvu2jtui_jHI0' }),
+    AngularFontAwesomeModule
   ]
 })
 export class UserModule { }
