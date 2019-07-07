@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin-dsahboard.component.scss']
 })
 export class AdminDsahboardComponent implements OnInit {
-
+  
   constructor() { }
+  dtOptions: DataTables.Settings = {};
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.dtOptions = {
+      pagingType: 'full_numbers'
+    };
   }
-
 }
