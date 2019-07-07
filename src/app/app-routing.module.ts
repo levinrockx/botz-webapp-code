@@ -1,63 +1,24 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { ProductsComponent } from './products/products.component';
-import { ContactComponent } from './contact/contact.component';
-import { AboutComponent } from './about/about.component';
-import { ServicesComponent } from './services/services.component';
-import { BlogarticleComponent } from './blog/blogarticle/blogarticle.component';
-import { BlogMainComponent } from './blog/blog-main/blog-main.component';
 import { VersionComponent } from './version/version.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { AdminDsahboardComponent } from './admin-dsahboard/admin-dsahboard.component';
-import { LoginComponent} from './login/login.component';
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
   {
-    path: 'home',
-    component: HomeComponent,
+    path: '',
+    loadChildren: () => import('./user/user.module').then(mod => mod.UserModule)
   },
   {
-    path: 'products',
-    component: ProductsComponent,
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then(mod => mod.LoginModule)
   },
   {
-    path: 'contact',
-    component: ContactComponent,
-  },
-  {
-    path: 'about',
-    component: AboutComponent,
-  },
-  {
-    path: 'services',
-    component: ServicesComponent,
-  },
-  {
-    path: 'blogarticle',
-    component: BlogarticleComponent,
-    // redirectTo: '',
-    // pathMatch: 'full',
-  },
-  {
-    path: 'blog',
-    component: BlogMainComponent,
-    // redirectTo: '',
-    // pathMatch: 'full',
+    path: 'admin',
+    loadChildren: () => import('./dashboard/dashboard.module').then(mod => mod.DashboardModule)
   },
   {
     path: 'version',
     component: VersionComponent,
   },
-  {
-    path: 'kk',
-    component: LoginComponent,
-  },
-  {
-    path: 'admin-dashboard',
-    component: AdminDsahboardComponent,
-  },
-
   {
     path: '**', redirectTo: 'pageNotFound', pathMatch: 'full'
   },
@@ -65,7 +26,7 @@ const routes: Routes = [
     path: 'pageNotFound',
     component: PageNotFoundComponent
   },
-  
+
   // { path: 'header', component: HeaderComponent, outlet: 'header'}
 ];
 

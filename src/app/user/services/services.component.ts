@@ -18,6 +18,7 @@ export class ServicesComponent implements OnInit {
   @ViewChild('designHead', { static: true }) designHead: ElementRef;
   @ViewChild('paraTwo', { static: true }) paraTwo: ElementRef;
   @ViewChild('containerTwo', { static: true }) containerTwo: ElementRef;
+  @ViewChild('mainTwo', { static: true }) mainTwo: ElementRef;
 
 
   public icon_name;
