@@ -10,16 +10,6 @@ import { BlogMainComponent } from './blog/blog-main/blog-main.component';
 import { UserLandingComponent } from './user-landing/user-landing.component';
 
 const routes: Routes = [
-  // {
-  //   path: '',
-  //   redirectTo: 'home',
-  //   pathMatch: 'full',
-  // },
-  // {
-  //   path: 'landing',
-  //   component: UserLandingComponent,
-  // },
-
   {
     path: '',
     component: UserLandingComponent,
