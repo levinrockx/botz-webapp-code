@@ -19,38 +19,7 @@ const routes: Routes = [
   //   path: 'landing',
   //   component: UserLandingComponent,
   // },
-  // {
-  //   path: 'home',
-  //   component: HomeComponent,
-  // },
-  // {
-  //   path: 'products',
-  //   component: ProductsComponent,
-  // },
-  // {
-  //   path: 'contact',
-  //   component: ContactComponent,
-  // },
-  // {
-  //   path: 'about',
-  //   component: AboutComponent,
-  // },
-  // {
-  //   path: 'services',
-  //   component: ServicesComponent,
-  // },
-  // {
-  //   path: 'blogarticle',
-  //   component: BlogarticleComponent,
-  //   // redirectTo: '',
-  //   // pathMatch: 'full',
-  // },
-  // {
-  //   path: 'blog',
-  //   component: BlogMainComponent,
-  //   // redirectTo: '',
-  //   // pathMatch: 'full',
-  // },
+
   {
     path: '',
     component: UserLandingComponent,
@@ -58,7 +27,35 @@ const routes: Routes = [
       {
         path: 'home',
         component: HomeComponent,
-      }
+      },
+      {
+        path: 'products',
+        component: ProductsComponent,
+      },
+      {
+        path: 'contact',
+        component: ContactComponent,
+      },
+      {
+        path: 'about',
+        component: AboutComponent,
+      },
+      {
+        path: 'services',
+        component: ServicesComponent,
+      },
+      {
+        path: 'blogarticle',
+        component: BlogarticleComponent,
+        // redirectTo: '',
+        // pathMatch: 'full',
+      },
+      {
+        path: 'blog',
+        component: BlogMainComponent,
+        // redirectTo: '',
+        // pathMatch: 'full',
+      },
     ]
   }
 ];
