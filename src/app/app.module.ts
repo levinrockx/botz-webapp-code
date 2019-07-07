@@ -21,6 +21,7 @@ import { VersionComponent } from './version/version.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AdminDashboardHeaderComponent } from './admin-dashboard-header/admin-dashboard-header.component';
 import { BlogAdminDashboardComponent } from './blog-admin-dashboard/blog-admin-dashboard.component';
+import { AdminDsahboardComponent } from './admin-dsahboard/admin-dsahboard.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +41,7 @@ import { BlogAdminDashboardComponent } from './blog-admin-dashboard/blog-admin-d
     PageNotFoundComponent,
     AdminDashboardHeaderComponent,
     BlogAdminDashboardComponent,
+    AdminDsahboardComponent,
   ],
   imports: [
     BrowserModule,
