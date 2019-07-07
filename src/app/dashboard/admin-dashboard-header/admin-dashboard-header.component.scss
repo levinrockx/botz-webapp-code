@@ -46,7 +46,8 @@
 .row-responsive-main {
   display: none;
   position: fixed;
-  margin-top: 90px;
+  z-index: 9999;
+  top: 90px;
   width: 100%;
   background-color: #000000;
   color: #ffffff;
