@@ -11,7 +11,6 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { AdminDashboardHeaderComponent } from './admin-dashboard-header/admin-dashboard-header.component';
 import { BlogAdminDashboardComponent } from './blog-admin-dashboard/blog-admin-dashboard.component';
 import { AdminDsahboardComponent } from './admin-dsahboard/admin-dsahboard.component';
-import { DataTablesModule } from 'angular-datatables';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +23,6 @@ import { DataTablesModule } from 'angular-datatables';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DataTablesModule,
     HttpClientModule,
     AngularFontAwesomeModule,
     UserModule,
