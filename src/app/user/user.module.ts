@@ -16,6 +16,7 @@ import { UserRoutingModule } from './user-routing.module';
 import { UserLandingComponent } from './user-landing/user-landing.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { NguiMapModule } from '@ngui/map';
+import { AppsComponent } from './apps/apps.component';
 @NgModule({
   declarations: [
     UserLandingComponent,
@@ -30,7 +31,8 @@ import { NguiMapModule } from '@ngui/map';
     BlogMainComponent,
     BlogAllComponent,
     BlogLatestComponent,
-    BlogSearchComponent
+    BlogSearchComponent,
+    AppsComponent
   ],
   imports: [
     UserRoutingModule,
