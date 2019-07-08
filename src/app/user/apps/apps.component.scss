@@ -1,0 +1,44 @@
+.apps-main {
+  background-color: #ffffff;
+  margin-top: 100px !important;
+  width: 100%;
+
+  // ux changes for footer
+  margin-bottom: 600px !important;
+  box-shadow: 1px 14px 15px 2px #00000069;
+  border-bottom-left-radius: 2.7px;
+  border-bottom-right-radius: 2.7px;
+}
+.app-header {
+  padding-top: 100px;
+  font-family: SourceCodeProBlack;
+  font-size: 3.125rem;
+  padding-bottom: 50px !important;
+}
+.row-one {
+  height: 100vh;
+  margin-bottom: 100px !important;
+}
+.card-one {
+  width: 400px;
+  height: 400px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  background-color: #ffffff;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 10px;
+}
+.card-text {
+  font-family: SourceCodePro;
+  
+  letter-spacing: normal;
+  text-align: center;
+  color: #585656;
+}
+.right-text-wrapper {
+  display: flex;
+  align-items: flex-end;
+  color: #585656;
+}
