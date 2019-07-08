@@ -8,6 +8,7 @@ import { ServicesComponent } from './services/services.component';
 import { BlogarticleComponent } from './blog/blogarticle/blogarticle.component';
 import { BlogMainComponent } from './blog/blog-main/blog-main.component';
 import { UserLandingComponent } from './user-landing/user-landing.component';
+import { AppsComponent } from './apps/apps.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,10 @@ const routes: Routes = [
         path: 'home',
         component: HomeComponent,
       },
+      // {
+      //   path: 'apps',
+      //   component: AppsComponent,
+      // },
       {
         path: 'products',
         component: ProductsComponent,
