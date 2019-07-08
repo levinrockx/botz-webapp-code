@@ -6,6 +6,7 @@ import { AdminDsahboardComponent } from './admin-dsahboard/admin-dsahboard.compo
 import { DashboardLandingComponent } from './dashboard-landing/dashboard-landing.component';
 import { DataTablesModule } from 'angular-datatables';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AdminDashboardHeaderComponent,
@@ -17,6 +18,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     DashboardRoutingModule,
     DataTablesModule,
     AngularFontAwesomeModule,
+    HttpClientModule
   ]
 })
 export class DashboardModule { }

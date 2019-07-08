@@ -36,7 +36,7 @@ export class HomeComponent implements OnInit {
   }
 
   getBlogAll() {
-    this.http.get('http://127.0.0.1:5000/blogall').subscribe((response) => {
+    this.http.get('http://192.168.43.212:5000/blogall').subscribe((response) => {
       this.cardList = response;
     });
   }
