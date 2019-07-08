@@ -19,10 +19,10 @@ const routes: Routes = [
         path: 'home',
         component: HomeComponent,
       },
-      // {
-      //   path: 'apps',
-      //   component: AppsComponent,
-      // },
+      {
+        path: 'apps',
+        component: AppsComponent,
+      },
       {
         path: 'products',
         component: ProductsComponent,
