@@ -23,7 +23,6 @@ export class BlogAllComponent implements OnInit {
     });
   }
 
-
   reRoute(routeName) {
     this.router.navigate([routeName]);
   }
