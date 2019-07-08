@@ -23,12 +23,11 @@
       </thead>
 
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>Lorem Ipsum is simply dummy text of
-            the printing and typesetting.</td>
+        <tr *ngFor="let cardObj of cardList; let i = index">
+          <td>{{i}}</td>
+          <td>{{cardObj.title}}</td>
           <td>Anoop Mathew</td>
-          <td>05-01-2019</td>
+          <td>{{cardObj.date}}</td>
           <th>edit&delete</th>
         </tr>
       </tbody>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-admin-dsahboard',
@@ -6,13 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin-dsahboard.component.scss']
 })
 export class AdminDsahboardComponent implements OnInit {
-  
-  constructor() { }
+  public cardList;
+  constructor(
+    private http: HttpClient,
+  ) { }
   dtOptions: DataTables.Settings = {};
 
   ngOnInit(): void {
+    this.getBlogAll();
     this.dtOptions = {
       pagingType: 'full_numbers'
     };
+  }
+  getBlogAll() {
+    this.http.get('http://192.168.43.212:5000/blogall').subscribe((response) => {
+      this.cardList = response;
+    });
   }
 }
