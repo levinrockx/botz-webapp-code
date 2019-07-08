@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-dashboard-header',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminDashboardHeaderComponent implements OnInit {
   public flag: Boolean = false;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
@@ -15,5 +16,10 @@ export class AdminDashboardHeaderComponent implements OnInit {
   showResponsiveMenu() {
     this.flag = !this.flag;
   }
-
+  reRoute(routeName) {
+    if (this.flag) {
+      this.flag = false;
+    }
+    this.router.navigate([routeName]);
+  }
 }

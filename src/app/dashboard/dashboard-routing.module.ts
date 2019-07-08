@@ -2,8 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DashboardLandingComponent } from './dashboard-landing/dashboard-landing.component';
 import { AdminDsahboardComponent } from './admin-dsahboard/admin-dsahboard.component';
-
-const routes: Routes = [
+import { AdminDashboardSettingsComponentComponent } from './admin-dashboard-settings-component/admin-dashboard-settings-component.component';const routes: Routes = [
   {
     path: '',
     component: DashboardLandingComponent,
@@ -11,6 +10,10 @@ const routes: Routes = [
       {
         path: 'dashboard',
         component: AdminDsahboardComponent,
+      },
+      {
+        path: 'settings',
+        component: AdminDashboardSettingsComponentComponent
       },
     ]
   }

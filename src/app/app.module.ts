@@ -10,6 +10,7 @@ import { LoginModule } from './login/login.module';
 import { VersionComponent } from './version/version.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { DataTablesModule } from 'angular-datatables';
+
 @NgModule({
   declarations: [
     AppComponent,

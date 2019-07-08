@@ -8,11 +8,13 @@ import { DataTablesModule } from 'angular-datatables';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AdminDashboardSettingsComponentComponent } from './admin-dashboard-settings-component/admin-dashboard-settings-component.component';
 @NgModule({
   declarations: [
     AdminDashboardHeaderComponent,
     AdminDsahboardComponent,
     DashboardLandingComponent,
+    AdminDashboardSettingsComponentComponent,
   ],
   imports: [
     CommonModule,
