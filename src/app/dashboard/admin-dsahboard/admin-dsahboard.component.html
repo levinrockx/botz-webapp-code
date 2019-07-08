@@ -5,7 +5,7 @@
     </div>
     <hr class="break-line">
     <div>
-      <button class="add-button">
+      <button class="add-button" (click)="openModal(addBlogModal)">
         <span class="plus-icon">+ </span> New Blog
       </button>
     </div>
@@ -21,7 +21,6 @@
           <th>Action</th>
         </tr>
       </thead>
-
       <tbody>
         <tr *ngFor="let cardObj of cardList; let i = index">
           <td>{{i}}</td>
@@ -31,7 +30,41 @@
           <th>edit&delete</th>
         </tr>
       </tbody>
-
     </table>
   </div>
 </div>
+
+<ng-template #addBlogModal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Add a new blog</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+        <label for="title">Blog Title</label>
+        <div class="input-group">
+          <input id="title" class="form-control" placeholder="Enter title of the blog">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="desc">Blog Content</label>
+        <div class="input-group">
+          <textarea id="desc" class="form-control" placeholder="Enter contents of the blog"></textarea>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="img">Blog Image</label>
+        <div class="input-group">
+          <input id="img" type="file" class="form-control">
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-success" disabled (click)="modal.close()">Add</button>
+    <button type="button" class="btn btn-danger" (click)="modal.close()">Cancel</button>
+  </div>
+</ng-template>
