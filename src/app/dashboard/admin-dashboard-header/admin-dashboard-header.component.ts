@@ -16,10 +16,16 @@ export class AdminDashboardHeaderComponent implements OnInit {
   showResponsiveMenu() {
     this.flag = !this.flag;
   }
+
+  logout() {
+    this.reRoute('\login');
+  }
+
   reRoute(routeName) {
     if (this.flag) {
       this.flag = false;
     }
     this.router.navigate([routeName]);
   }
+
 }
