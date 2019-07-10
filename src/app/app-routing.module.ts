@@ -2,10 +2,13 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { VersionComponent } from './version/version.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-
 const routes: Routes = [
   {
     path: '',
+    loadChildren: () => import('./user/user.module').then(mod => mod.UserModule)
+  },
+  {
+    path: 'user',
     loadChildren: () => import('./user/user.module').then(mod => mod.UserModule)
   },
   {

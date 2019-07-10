@@ -17,6 +17,7 @@ import { UserLandingComponent } from './user-landing/user-landing.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { NguiMapModule } from '@ngui/map';
 import { AppsComponent } from './apps/apps.component';
+import { ResistanceFinderComponent } from './resistance-finder/resistance-finder.component';
 @NgModule({
   declarations: [
     UserLandingComponent,
@@ -32,7 +33,8 @@ import { AppsComponent } from './apps/apps.component';
     BlogAllComponent,
     BlogLatestComponent,
     BlogSearchComponent,
-    AppsComponent
+    AppsComponent,
+    ResistanceFinderComponent
   ],
   imports: [
     UserRoutingModule,

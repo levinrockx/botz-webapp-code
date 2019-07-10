@@ -10,6 +10,7 @@ import { LoginModule } from './login/login.module';
 import { VersionComponent } from './version/version.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { DataTablesModule } from 'angular-datatables';
+import { ConfigService } from  './Config/config.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,7 @@ import { DataTablesModule } from 'angular-datatables';
     DataTablesModule,
     DashboardModule,
   ],
-  providers: [],
+  providers: [ConfigService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

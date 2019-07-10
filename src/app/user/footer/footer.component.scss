@@ -65,3 +65,16 @@ ul {
   transition: 0.5s;
   color: #ed3833;
 }
+@media (max-width: 768px) {
+  .footer-contact-main {
+    display: none;
+  }
+}
+@media (max-height: 550px) {
+  .copyright-text {
+    padding-top: 20px;
+  }
+  .footer-content {
+    padding-top: 50px !important;
+  }
+}

@@ -9,6 +9,7 @@ import { BlogarticleComponent } from './blog/blogarticle/blogarticle.component';
 import { BlogMainComponent } from './blog/blog-main/blog-main.component';
 import { UserLandingComponent } from './user-landing/user-landing.component';
 import { AppsComponent } from './apps/apps.component';
+import { ResistanceFinderComponent } from './resistance-finder/resistance-finder.component';
 
 const routes: Routes = [
   {
@@ -19,10 +20,10 @@ const routes: Routes = [
         path: 'home',
         component: HomeComponent,
       },
-      // {
-      //   path: 'apps',
-      //   component: AppsComponent,
-      // },
+      {
+        path: 'apps',
+        component: AppsComponent,
+      },
       {
         path: 'products',
         component: ProductsComponent,
@@ -38,6 +39,10 @@ const routes: Routes = [
       {
         path: 'services',
         component: ServicesComponent,
+      },
+      {
+        path: 'resistancefinder',
+        component: ResistanceFinderComponent,
       },
       {
         path: 'blogarticle',

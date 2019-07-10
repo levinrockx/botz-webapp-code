@@ -10,14 +10,6 @@
   font-size: 3.125rem;
   padding-bottom: 50px !important;
 }
-@media (max-width: 343px) {
-  .contact-heading {
-    font-size: 3rem;
-  }
-  .botz{
-    font-size: 1rem;
-  }
-}
 .cust-input {
   width: 100%;
   border: 0px;
@@ -36,9 +28,6 @@
 .contact-item {
   margin-bottom: 30px !important;
 }
-.right-main {
-  display: none;
-}
 .map-row-main {
   background-color: #ffffff;
 
@@ -47,4 +36,22 @@
   box-shadow: 1px 14px 15px 2px #00000069;
   border-bottom-left-radius: 2.7px;
   border-bottom-right-radius: 2.7px;
+}
+@media (max-width: 720px){
+  .contact-heading{
+    text-align: center;
+  }
+  .left-main{
+    text-align: center;
+    padding-bottom: 50px;
+  }
+  .cust-input{
+    width: 93%;
+    display: block;
+    margin-left: auto;
+  }
+  .pull-right{
+    float: left !important;
+    margin-left: 17px !important;
+  }
 }
