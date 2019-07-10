@@ -7,8 +7,8 @@
       Admin login
     </div>
     <div class="input-wrapper">
-      <input type="text" class="text-input" placeholder="username">
-      <input type="password" class="text-input" placeholder="password">
+      <input type="text" class="text-input" placeholder="username" [(ngModel)]="username">
+      <input type="password" class="text-input" placeholder="password" [(ngModel)]="password">
     </div>
     <div class="login-button-wrapper col-md-8 col-lg-8">
       <button class="btn login-button" (click)="login()">Login</button>
