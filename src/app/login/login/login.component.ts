@@ -14,10 +14,10 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    this.reRoute('/admin')
+    this.reRoute('/admin');
   }
 
   reRoute(path){
-    this.loginRouter.navigate([path])
+    this.loginRouter.navigate([path]);
   }
 }
