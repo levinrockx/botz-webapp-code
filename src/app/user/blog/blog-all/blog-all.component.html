@@ -1,5 +1,5 @@
 <div class="p-2">
-  <div class="row col-12 blog-main p-0 m-0" (click)="reRoute('/blogarticle')">
+  <div class="row col-12 col-md- blog-main p-0 m-0" (click)="reRoute('/blogarticle')">
     <div class="col-6 p-0">
       <img src="assets/img/ec1.png" class="img-class">
     </div>
@@ -21,7 +21,7 @@
 </div>
 <div class="row blog-cards-main">
   <div class="row col-12 m-0 p-0">
-    <div *ngFor="let card  of cardList" class="col-4 p-4">
+    <div *ngFor="let card  of cardList" class="col-6 col-lg-4 p-4">
       <div class="blog-card" (click)="reRoute('/blogarticle')">
         <img src="assets/img/ec1.png" class="blog-img">
         <div class="blog-card-text-main">
