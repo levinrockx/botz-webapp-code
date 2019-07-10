@@ -16,7 +16,7 @@ export class ConfigService {
     relatedblog: '/relatedblog',
     blogpost: '/blogpost',
     contactus: '/contactus',
-  }
+  };
 
   constructor() { }
 }

@@ -12,7 +12,19 @@ export class DashboardLandingComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.dashboardRouter.navigate(['admin/dashboard']);
+    this.logincheck();
   }
 
+  logincheck() {
+    const tocken = sessionStorage.getItem('tocken');
+    if (tocken === 'botzadmin') {
+      this.reRoute('/admin/dashboard');
+    } else {
+      this.reRoute('/login');
+    }
+  }
+
+  reRoute(path) {
+    this.dashboardRouter.navigate([path]);
+  }
 }
