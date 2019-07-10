@@ -64,3 +64,27 @@
   padding-bottom: 10px;
   font-size: 0.8rem;
 }
+@media (max-width: 992px) {
+  .bloghead {
+    font-size: 2rem !important;
+  }
+  .blogtext {
+    display: none !important;
+  }
+}
+@media (max-width: 768px) {
+  .bloghead {
+    font-size: 1rem !important;
+  }
+}
+@media (max-width: 768px) {
+  .blog-text-desc {
+    display: none !important;
+  }
+  .blog-card {
+    height: auto !important;
+  }
+  .blogdate {
+    display: none !important;
+  }
+}
