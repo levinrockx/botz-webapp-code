@@ -2,6 +2,7 @@ import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { Power4, Back, Expo } from 'gsap/all';
+import { ConfigService } from '../../Config/config.service';
 declare var TweenMax: any;
 @Component({
   selector: 'app-home',
@@ -17,6 +18,7 @@ export class HomeComponent implements OnInit {
   constructor(
     private http: HttpClient,
     private router: Router,
+    private config: ConfigService,
   ) { }
 
   ngOnInit() {
@@ -36,7 +38,8 @@ export class HomeComponent implements OnInit {
   }
 
   getBlogAll() {
-    this.http.get('http://192.168.43.212:5000/blogall').subscribe((response) => {
+    const url = `${this.config.API_ENDPOINT}${this.config.API_ENDPOINT_NAMES.blogall}`;
+    this.http.get(url).subscribe((response) => {
       this.cardList = response;
     });
   }
