@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { ConfigService } from '../../Config/config.service';
 @Component({
   selector: 'app-admin-dsahboard',
   templateUrl: './admin-dsahboard.component.html',
@@ -12,6 +13,7 @@ export class AdminDsahboardComponent implements OnInit {
   constructor(
     private http: HttpClient,
     private modalService: NgbModal,
+    private Config: ConfigService,
   ) { }
 
   ngOnInit(): void {
@@ -21,7 +23,8 @@ export class AdminDsahboardComponent implements OnInit {
   }
 
   getBlogAll() {
-    this.http.get('http://192.168.43.212:5000/blogall').subscribe((response) => {
+    const url = `${this.Config.API_ENDPOINT}${this.Config.API_ENDPOINT_NAMES.blogall}`;
+    this.http.get(url).subscribe((response) => {
       this.cardList = response;
     });
   }

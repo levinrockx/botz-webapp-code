@@ -23,6 +23,9 @@ import { AdminDashboardSettingsComponent } from './admin-dashboard-settings/admi
     AngularFontAwesomeModule,
     HttpClientModule,
     NgbModule
+  ],
+  providers: [
+    ConfigService,
   ]
 })
 export class DashboardModule { }

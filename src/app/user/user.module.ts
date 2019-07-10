@@ -18,6 +18,8 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { NguiMapModule } from '@ngui/map';
 import { AppsComponent } from './apps/apps.component';
 import { ResistanceFinderComponent } from './resistance-finder/resistance-finder.component';
+import { ConfigService } from '../Config/config.service';
+
 @NgModule({
   declarations: [
     UserLandingComponent,
@@ -41,6 +43,9 @@ import { ResistanceFinderComponent } from './resistance-finder/resistance-finder
     CommonModule,
     NguiMapModule.forRoot({ apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyCiLrXdz4_P_D7f1g8PjqVvu2jtui_jHI0' }),
     AngularFontAwesomeModule
+  ],
+  providers: [
+    ConfigService,
   ]
 })
 export class UserModule { }
