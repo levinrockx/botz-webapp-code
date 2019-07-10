@@ -9,6 +9,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ConfigService } from '../Config/config.service';
+import { VersionComponent } from '../version/version.component';
 import { AdminDashboardSettingsComponent } from './admin-dashboard-settings/admin-dashboard-settings.component';
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { AdminDashboardSettingsComponent } from './admin-dashboard-settings/admi
     AdminDsahboardComponent,
     DashboardLandingComponent,
     AdminDashboardSettingsComponent,
+    VersionComponent
   ],
   imports: [
     CommonModule,
@@ -27,6 +29,7 @@ import { AdminDashboardSettingsComponent } from './admin-dashboard-settings/admi
   ],
   providers: [
     ConfigService,
-  ]
+  ],
+  exports: [VersionComponent],
 })
 export class DashboardModule { }
