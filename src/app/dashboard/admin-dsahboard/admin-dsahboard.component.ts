@@ -9,6 +9,8 @@ import { ConfigService } from '../../Config/config.service';
 })
 export class AdminDsahboardComponent implements OnInit {
   public cardList;
+  public editmodaltitle;
+
   dtOptions: DataTables.Settings = {};
   constructor(
     private http: HttpClient,
@@ -34,6 +36,11 @@ export class AdminDsahboardComponent implements OnInit {
       size: 'lg',
       centered: true,
     });
+  }
+
+  openeditModal(modalId,i) {
+    this.editmodaltitle = this.cardList[i]['title'];
+    this.openModal(modalId);
   }
 
 }

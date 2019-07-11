@@ -28,8 +28,8 @@
           <td>Anoop Mathew</td>
           <td>{{cardObj.date}}</td>
           <th>
-            <fa name="pencil" class="icon-pencil" (click)="openModal(editBlogModal)"> </fa>
-            <fa name="trash" class="icon-trash" (click)="openModal(deleteBlogModal)"></fa>
+            <fa name="pencil" class="icon-pencil" (click)="openeditModal(editBlogModal, i)"> </fa>
+            <fa name="trash" class="icon-trash" (click)="openeditModal(deleteBlogModal, i)"></fa>
           </th>
         </tr>
       </tbody>
@@ -74,7 +74,7 @@
 
 <ng-template #editBlogModal let-modal>
   <div class="modal-header">
-    <h4 class="modal-title" id="title"> Edit blog</h4>
+    <h4 class="modal-title" id="title">{{editmodaltitle}}</h4>
     <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
       <span aria-hidden="true">&times;</span>
     </button>
@@ -82,7 +82,7 @@
   <div class="modal-body">
     <form>
       <div class="form-group">
-              </div>
+      </div>
       <div class="form-group">
         <label for="desc">Blog Content</label>
         <div class="input-group">
@@ -105,7 +105,7 @@
 
 <ng-template #deleteBlogModal let-modal>
   <div class="modal-header">
-    <h4 class="modal-title" id="Title">Delete blog</h4>
+    <h4 class="modal-title" id="Title">{{editmodaltitle}}</h4>
     <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
       <span aria-hidden="true">&times;</span>
     </button>
@@ -113,7 +113,7 @@
   <div class="modal-body">
     <form>
       <div class="form-group">
-       
+
       </div>
       <div class="form-group">
         <label for="desc">Do you want to delete this blog ?</label>
@@ -121,7 +121,7 @@
     </form>
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-success" disabled (click)="modal.close()">Conform</button>
+    <button type="button" class="btn btn-success" disabled (click)="modal.close()">Delete</button>
     <button type="button" class="btn btn-danger" (click)="modal.close()">Cancel</button>
   </div>
 </ng-template>
