@@ -25,10 +25,11 @@
   // align-items: flex-end;
   // justify-content: center;
   padding: 10px;
-  box-shadow: 0 2px 10px 1px rgba(0,0,0,.1);
+  box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.1);
+  transition: all 0.25s cubic-bezier(0.37, 0.31, 0.2, 0.85);
 }
 .card-text {
-  font-family: SourceCodeProLight;
+  font-family: SourceCodeProBlack;
   letter-spacing: normal;
   text-align: center;
 }
@@ -44,6 +45,24 @@
 }
 .icon {
   font-size: 13rem;
+}
+.card-one:hover {
+  cursor: pointer;
+  color: #ed3833 !important;
+  .icon {
+    animation-name: spin;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 .row-one {
   padding-bottom: 100px !important;
