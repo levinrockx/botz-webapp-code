@@ -19,7 +19,7 @@ export class ConfigService {
     contactus: '/contactus',
   };
 
-  public VERSION_NUMBER = 'v0.1.5';
+  public VERSION_NUMBER = 'v0.1.6';
 
   public TOCKEN = {
     keyname : 'tocken',
