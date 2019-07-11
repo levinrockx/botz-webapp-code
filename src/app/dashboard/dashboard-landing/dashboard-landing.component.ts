@@ -16,7 +16,7 @@ export class DashboardLandingComponent implements OnInit {
   }
 
   logincheck() {
-    const tocken = sessionStorage.getItem('tocken');
+    const tocken = localStorage.getItem('tocken');
     if (tocken === 'botzadmin') {
       this.reRoute('/admin/dashboard');
     } else {

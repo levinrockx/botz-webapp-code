@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
   public username;
   public password;
   constructor
-    (
+  (
       private loginRouter: Router,
       private http: HttpClient,
       private Config: ConfigService,
@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
   }
 
   logincheck() {
-    const tocken = sessionStorage.getItem('tocken');
+    const tocken = localStorage.getItem('tocken');
     if (tocken === 'botzadmin') {
       this.reRoute('/admin');
     }
@@ -32,20 +32,19 @@ export class LoginComponent implements OnInit {
 
   login() {
     const url = `${this.Config.API_ENDPOINT}${this.Config.API_ENDPOINT_NAMES.login}`;
-    console.log(this.username, this.password);
     const body = {
       username: this.username,
       password: this.password,
     };
-    // const httpOptions = {
-    //   headers: new HttpHeaders({
-    //     'Content-Type':  'application/json',
-    //     'Accept':  'application/json',
-    //   })
-    //  };
-    this.http.get(url).subscribe((response) => {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json',
+        'Accept':  'application/json',
+      })
+     };
+    this.http.post(url, body, httpOptions).subscribe((response) => {
       if (response['status'] === 'success') {
-        sessionStorage.setItem('tocken', 'botzadmin');
+        localStorage.setItem(this.Config.TOCKEN.keyname, this.Config.TOCKEN.keyvalue);
         this.reRoute('/admin');
       } else {
         Swal.fire({

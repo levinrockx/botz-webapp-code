@@ -18,7 +18,7 @@ export class AdminDashboardHeaderComponent implements OnInit {
   }
 
   logout() {
-    sessionStorage.clear();
+    localStorage.clear();
     this.reRoute('\login');
   }
 

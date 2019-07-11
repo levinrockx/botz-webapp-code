@@ -1,5 +1,7 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { Power4, Back, Expo } from 'gsap/all';
+import { ConfigService } from '../Config/config.service';
+
 declare var TweenMax: any;
 @Component({
   selector: 'app-version',
@@ -12,10 +14,16 @@ export class VersionComponent implements OnInit {
   @ViewChild('contentOne', { static: true }) contentOne: ElementRef;
   @ViewChild('headingTwo', { static: true }) headingTwo: ElementRef;
   @ViewChild('contentTwo', { static: true }) contentTwo: ElementRef;
-  constructor() { }
+
+  private version;
+
+  constructor(
+    private Config: ConfigService,
+  ) { }
 
   ngOnInit() {
     this.startAnimation();
+    this.version = this.Config.VERSION_NUMBER;
   }
 
   startAnimation() {
