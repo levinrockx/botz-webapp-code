@@ -7,10 +7,10 @@ import { AppComponent } from './app.component';
 import { UserModule } from './user/user.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { LoginModule } from './login/login.module';
-import { VersionComponent } from './version/version.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { DataTablesModule } from 'angular-datatables';
-import { ConfigService } from  './Config/config.service';
+import { ConfigService } from './Config/config.service';
+import { HttplayerService } from './HttpService/httplayer.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +26,10 @@ import { ConfigService } from  './Config/config.service';
     DataTablesModule,
     DashboardModule,
   ],
-  providers: [ConfigService],
+  providers: [
+    ConfigService,
+    HttplayerService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

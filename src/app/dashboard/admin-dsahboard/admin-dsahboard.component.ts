@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttplayerService } from '../../HttpService/httplayer.service';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { ConfigService } from '../../Config/config.service';
 @Component({
@@ -13,7 +13,7 @@ export class AdminDsahboardComponent implements OnInit {
 
   dtOptions: DataTables.Settings = {};
   constructor(
-    private http: HttpClient,
+    private httpLayer: HttplayerService,
     private modalService: NgbModal,
     private Config: ConfigService,
   ) { }
@@ -26,7 +26,7 @@ export class AdminDsahboardComponent implements OnInit {
 
   getBlogAll() {
     const url = `${this.Config.API_ENDPOINT}${this.Config.API_ENDPOINT_NAMES.blogall}`;
-    this.http.get(url).subscribe((response) => {
+    this.httpLayer.get(url).subscribe((response) => {
       this.cardList = response;
     });
   }
@@ -38,7 +38,7 @@ export class AdminDsahboardComponent implements OnInit {
     });
   }
 
-  openeditModal(modalId,i) {
+  openeditModal(modalId, i) {
     this.editmodaltitle = this.cardList[i]['title'];
     this.openModal(modalId);
   }

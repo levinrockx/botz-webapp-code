@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttplayerService } from '../../HttpService/httplayer.service';
 import { ConfigService } from '../../Config/config.service';
 import Swal from 'sweetalert2';
 @Component({
@@ -13,10 +13,10 @@ export class LoginComponent implements OnInit {
   public username;
   public password;
   constructor
-  (
-      private loginRouter: Router,
-      private http: HttpClient,
-      private Config: ConfigService,
+    (
+    private loginRouter: Router,
+    private httpLayer: HttplayerService,
+    private Config: ConfigService,
   ) { }
 
   ngOnInit() {
@@ -36,13 +36,7 @@ export class LoginComponent implements OnInit {
       username: this.username,
       password: this.password,
     };
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type':  'application/json',
-        'Accept':  'application/json',
-      })
-     };
-    this.http.post(url, body, httpOptions).subscribe((response) => {
+    this.httpLayer.post(url, body).subscribe((response) => {
       if (response['status'] === 'success') {
         localStorage.setItem(this.Config.TOCKEN.keyname, this.Config.TOCKEN.keyvalue);
         this.reRoute('/admin');

@@ -1,5 +1,5 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttplayerService } from '../../HttpService/httplayer.service';
 import { Router } from '@angular/router';
 import { Power4, Back, Expo } from 'gsap/all';
 import { ConfigService } from '../../Config/config.service';
@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   @ViewChild('rowThree', { static: true }) rowThree: ElementRef;
 
   constructor(
-    private http: HttpClient,
+    private httpLayer: HttplayerService,
     private router: Router,
     private config: ConfigService,
   ) { }
@@ -39,7 +39,7 @@ export class HomeComponent implements OnInit {
 
   getBlogAll() {
     const url = `${this.config.API_ENDPOINT}${this.config.API_ENDPOINT_NAMES.blogall}`;
-    this.http.get(url).subscribe((response) => {
+    this.httpLayer.get(url).subscribe((response) => {
       this.cardList = response;
     });
   }

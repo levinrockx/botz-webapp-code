@@ -11,6 +11,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ConfigService } from '../Config/config.service';
 import { VersionComponent } from '../version/version.component';
 import { AdminDashboardSettingsComponent } from './admin-dashboard-settings/admin-dashboard-settings.component';
+import { HttplayerService } from '../HttpService/httplayer.service';
 @NgModule({
   declarations: [
     AdminDashboardHeaderComponent,
@@ -29,6 +30,7 @@ import { AdminDashboardSettingsComponent } from './admin-dashboard-settings/admi
   ],
   providers: [
     ConfigService,
+    HttplayerService
   ],
   exports: [VersionComponent],
 })

@@ -5,6 +5,7 @@ import { LoginRoutingModule } from './login-routing.module';
 import { LoginComponent } from './login/login.component';
 import { ConfigService } from '../Config/config.service';
 import { HttpClientModule } from '@angular/common/http';
+import { HttplayerService } from '../HttpService/httplayer.service';
 
 @NgModule({
   declarations: [LoginComponent],
@@ -14,7 +15,10 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule,
   ],
-  providers: [ConfigService],
+  providers: [
+    ConfigService,
+    HttplayerService,
+  ],
   bootstrap: [LoginComponent]
 })
 export class LoginModule { }

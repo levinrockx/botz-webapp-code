@@ -19,7 +19,7 @@ import { NguiMapModule } from '@ngui/map';
 import { AppsComponent } from './apps/apps.component';
 import { ResistanceFinderComponent } from './resistance-finder/resistance-finder.component';
 import { ConfigService } from '../Config/config.service';
-
+import { HttplayerService } from '../HttpService/httplayer.service';
 @NgModule({
   declarations: [
     UserLandingComponent,
@@ -46,6 +46,7 @@ import { ConfigService } from '../Config/config.service';
   ],
   providers: [
     ConfigService,
+    HttplayerService,
   ]
 })
 export class UserModule { }
