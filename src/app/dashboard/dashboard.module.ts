@@ -12,6 +12,8 @@ import { ConfigService } from '../Config/config.service';
 import { VersionComponent } from '../version/version.component';
 import { AdminDashboardSettingsComponent } from './admin-dashboard-settings/admin-dashboard-settings.component';
 import { HttplayerService } from '../HttpService/httplayer.service';
+import {FormsModule} from '@angular/forms';
+import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown';
 @NgModule({
   declarations: [
     AdminDashboardHeaderComponent,
@@ -26,7 +28,9 @@ import { HttplayerService } from '../HttpService/httplayer.service';
     DataTablesModule,
     AngularFontAwesomeModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    FormsModule,
+    AngularMultiSelectModule
   ],
   providers: [
     ConfigService,

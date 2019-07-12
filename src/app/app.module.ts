@@ -11,6 +11,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { DataTablesModule } from 'angular-datatables';
 import { ConfigService } from './Config/config.service';
 import { HttplayerService } from './HttpService/httplayer.service';
+import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +26,7 @@ import { HttplayerService } from './HttpService/httplayer.service';
     LoginModule,
     DataTablesModule,
     DashboardModule,
+    AngularMultiSelectModule
   ],
   providers: [
     ConfigService,

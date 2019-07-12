@@ -25,7 +25,7 @@
         <tr *ngFor="let cardObj of cardList; let i = index">
           <td>{{i}}</td>
           <td>{{cardObj.title}}</td>
-          <td>Anoop Mathew</td>
+          <td>{{cardObj.author}}</td>
           <td>{{cardObj.date}}</td>
           <th>
             <fa name="pencil" class="icon-pencil" (click)="openeditModal(editBlogModal, i)"> </fa>
@@ -45,29 +45,44 @@
     </button>
   </div>
   <div class="modal-body">
-    <form>
-      <div class="form-group">
-        <label for="title">Blog Title</label>
-        <div class="input-group">
-          <input id="title" class="form-control" placeholder="Enter title of the blog">
+    <div class="form-group">
+      <label for="title">Blog Title</label>
+      <div class="input-group">
+        <input id="title" class="form-control" [(ngModel)]="blog.title" placeholder="Enter title of the blog">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="desc">Blog Content</label>
+      <div class="input-group">
+        <textarea id="desc" class="form-control" [(ngModel)]="blog.desc"
+          placeholder="Enter contents of the blog"></textarea>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="author">Blog Author</label>
+      <div class="input-group">
+        <input id="author" class="form-control" [(ngModel)]="blog.author" placeholder="Enter author name">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="tags">Blog Tags</label>
+      <div class="input-group">
+        <div class="multi-select">
+          <angular2-multiselect id="tags" [data]="dropdownList" [(ngModel)]="blog.tags"
+            [settings]="dropdownSettings">
+          </angular2-multiselect>
         </div>
       </div>
-      <div class="form-group">
-        <label for="desc">Blog Content</label>
-        <div class="input-group">
-          <textarea id="desc" class="form-control" placeholder="Enter contents of the blog"></textarea>
-        </div>
+    </div>
+    <div class="form-group">
+      <label for="img">Blog Image</label>
+      <div class="input-group">
+        <input id="img" type="file" class="form-control">
       </div>
-      <div class="form-group">
-        <label for="img">Blog Image</label>
-        <div class="input-group">
-          <input id="img" type="file" class="form-control">
-        </div>
-      </div>
-    </form>
+    </div>
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-success" disabled (click)="modal.close()">Add</button>
+    <button type="button" class="btn btn-success" (click)="addBlog()">Add</button>
     <button type="button" class="btn btn-danger" (click)="modal.close()">Cancel</button>
   </div>
 </ng-template>
