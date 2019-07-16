@@ -36,7 +36,7 @@
     <div class="row blog-cards-main">
       <div class="row col-12 m-0 p-0">
         <div *ngFor="let card of cardList" class="col-4 p-4">
-          <div class="blog-card" (click)="reRoute('/blogarticle')">
+          <div class="blog-card" (click)="blogopen(card._id.$oid)">
             <img src="assets/img/ec1.png" class="blog-img">
             <div class="blog-card-text-main">
               <div class="blog-text-date">{{card.date}}</div>

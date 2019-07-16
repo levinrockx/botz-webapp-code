@@ -5,8 +5,8 @@ import { Injectable } from '@angular/core';
 })
 export class ConfigService {
 
-  public API_ENDPOINT = 'http://192.168.43.212:5000';
-  // public API_ENDPOINT = 'http://10.6.1.193:5000';
+  // public API_ENDPOINT = 'http://192.168.43.212:5000';
+  public API_ENDPOINT = 'http://10.6.1.193:5000';
 
   public API_ENDPOINT_NAMES = {
     blogall: '/blogall',
