@@ -45,7 +45,7 @@ const routes: Routes = [
         component: ResistanceFinderComponent,
       },
       {
-        path: 'blogarticle',
+        path: 'blogarticle/:id',
         component: BlogarticleComponent,
         // redirectTo: '',
         // pathMatch: 'full',

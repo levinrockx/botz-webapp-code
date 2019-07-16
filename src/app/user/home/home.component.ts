@@ -48,4 +48,9 @@ export class HomeComponent implements OnInit {
     this.router.navigate([routeName]);
   }
 
+  blogopen(id){
+    const url = `/blogarticle/${id}`;
+    this.reRoute(url);
+  }
+
 }

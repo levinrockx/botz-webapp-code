@@ -30,4 +30,10 @@ export class BlogAllComponent implements OnInit {
   reRoute(routeName) {
     this.router.navigate([routeName]);
   }
+
+  blogPost(id) {
+    const url= `/blogarticle/${id}`;
+    this.reRoute(url);
+  }
+
 }
