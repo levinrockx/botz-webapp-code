@@ -12,6 +12,7 @@ export class AdminDsahboardComponent implements OnInit {
   public cardList;
   public editmodaltitle;
   public deleteblogid;
+  public editblogid;
   public date = new Date();
   public dropdownList = [
     { 'id': 1, 'itemName': 'Electornics' },
@@ -58,21 +59,50 @@ export class AdminDsahboardComponent implements OnInit {
   }
 
   openModal(modalId) {
-    // this.blog = {
-    //   title: '',
-    //   desc: '',
-    //   date: '',
-    //   author: '',
-    //   tags: [],
-    // };
     this.modalService.open(modalId, {
       size: 'lg',
       centered: true,
     });
   }
 
+  openAddModal(modalId) {
+    this.blog = {
+      title: '',
+      desc: '',
+      date: '',
+      author: '',
+      tags: [],
+    };
+    this.openModal(modalId);
+  }
+
+  addBlog() {
+    this.blog.date = `${this.date.getUTCDate()}-${this.date.getMonth() + 1}-${this.date.getFullYear()}`;
+    const url = `${this.Config.API_ENDPOINT}${this.Config.API_ENDPOINT_NAMES.blogadd}`;
+    this.httpLayer.post(url, this.blog).subscribe((response) => {
+      if (response['status'] === 'success') {
+        this.modalService.dismissAll();
+        this.getBlogAll();
+        Swal.fire({
+          title: this.blog.title,
+          text: 'Blog added successfully',
+          type: 'success',
+          confirmButtonText: 'Ok'
+        });
+      } else {
+        Swal.fire({
+          title: this.blog.title,
+          text: 'Blog adding falied',
+          type: 'error',
+          confirmButtonText: 'Ok'
+        });
+      }
+    });
+  }
+
   openeditModal(modalId, i) {
     this.editmodaltitle = this.cardList[i]['title'];
+    this.editblogid = this.cardList[i]['_id']['$oid'];
     const body = {
       id: this.cardList[i]._id.$oid,
     };
@@ -84,7 +114,7 @@ export class AdminDsahboardComponent implements OnInit {
           desc: response['data']['desc'],
           date: response['data']['date'],
           author: response['data']['author'],
-          tags: [],
+          tags: response['data']['tags'],
         };
         this.openModal(modalId);
       } else {
@@ -96,7 +126,37 @@ export class AdminDsahboardComponent implements OnInit {
         });
       }
     });
+  }
 
+  editBlog() {
+    const body = {
+      id: this.editblogid,
+      title: this.blog.title,
+      desc: this.blog.desc,
+      date: this.blog.date,
+      tags: this.blog.tags,
+      author: this.blog.author,
+    };
+    const url = `${this.Config.API_ENDPOINT}${this.Config.API_ENDPOINT_NAMES.blogupdate}`;
+    this.httpLayer.post(url, body).subscribe((response) => {
+      if (response['status'] === 'success') {
+        this.getBlogAll();
+        this.modalService.dismissAll();
+        Swal.fire({
+          title: this.blog.title,
+          text: 'Blog updated successfully',
+          type: 'success',
+          confirmButtonText: 'Ok'
+        });
+      } else {
+        Swal.fire({
+          title: this.blog.title,
+          text: 'Blog updation falied',
+          type: 'error',
+          confirmButtonText: 'Ok'
+        });
+      }
+    });
   }
 
   opendeleteModal(modalId, i) {
@@ -129,30 +189,6 @@ export class AdminDsahboardComponent implements OnInit {
         });
       }
     })
-  }
-
-  addBlog() {
-    this.blog.date = `${this.date.getUTCDate()}-${this.date.getMonth() + 1}-${this.date.getFullYear()}`;
-    const url = `${this.Config.API_ENDPOINT}${this.Config.API_ENDPOINT_NAMES.blogadd}`;
-    this.httpLayer.post(url, this.blog).subscribe((response) => {
-      if (response['status'] === 'success') {
-        this.modalService.dismissAll();
-        this.getBlogAll();
-        Swal.fire({
-          title: this.blog.title,
-          text: 'Blog added successfully',
-          type: 'success',
-          confirmButtonText: 'Ok'
-        });
-      } else {
-        Swal.fire({
-          title: this.blog.title,
-          text: 'Blog adding falied',
-          type: 'error',
-          confirmButtonText: 'Ok'
-        });
-      }
-    });
   }
 
 }

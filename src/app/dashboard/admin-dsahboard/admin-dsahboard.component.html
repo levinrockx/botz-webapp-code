@@ -5,12 +5,12 @@
     </div>
     <hr class="break-line">
     <div>
-      <button class="add-button" (click)="openModal(addBlogModal)">
+      <button class="add-button" (click)="openAddModal(addBlogModal)">
         <span class="plus-icon">+ </span> New Blog
       </button>
     </div>
   </div>
-  <div class="blod-table container">
+  <div class="blod-table container" *ngIf="cardList.length != 0">
     <table datatable [dtOptions]="dtOptions" class="row-border hover">
       <thead>
         <tr>
@@ -130,7 +130,7 @@
     </div>
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-success" (click)="modal.close()">Update</button>
+    <button type="button" class="btn btn-success" (click)="editBlog()">Update</button>
     <button type="button" class="btn btn-danger" (click)="modal.close()">Cancel</button>
   </div>
 </ng-template>
