@@ -57,13 +57,13 @@ export class AdminDsahboardComponent implements OnInit {
   }
 
   openModal(modalId) {
-    this.blog = {
-      title: '',
-      desc: '',
-      date: '',
-      author: '',
-      tags: [],
-    };
+    // this.blog = {
+    //   title: '',
+    //   desc: '',
+    //   date: '',
+    //   author: '',
+    //   tags: [],
+    // };
     this.modalService.open(modalId, {
       size: 'lg',
       centered: true,
@@ -71,6 +71,34 @@ export class AdminDsahboardComponent implements OnInit {
   }
 
   openeditModal(modalId, i) {
+    this.editmodaltitle = this.cardList[i]['title'];
+    const body = {
+      id: this.cardList[i]._id.$oid,
+    };
+    const url = `${this.Config.API_ENDPOINT}${this.Config.API_ENDPOINT_NAMES.blogupdate}`;
+    this.httpLayer.post(url, body).subscribe((response) => {
+      if (response['status'] === 'success') {
+        this.blog = {
+          title: response['data']['title'],
+          desc: response['data']['desc'],
+          date: response['data']['date'],
+          author: response['data']['author'],
+          tags: [],
+        };
+        this.openModal(modalId);
+      } else {
+        Swal.fire({
+          title: this.editmodaltitle,
+          text: 'Blog update falied',
+          type: 'error',
+          confirmButtonText: 'Ok'
+        });
+      }
+    });
+
+  }
+
+  opendeleteModal(modalId, i) {
     this.editmodaltitle = this.cardList[i]['title'];
     this.openModal(modalId);
   }

@@ -29,7 +29,7 @@
           <td>{{cardObj.date}}</td>
           <th>
             <fa name="pencil" class="icon-pencil" (click)="openeditModal(editBlogModal, i)"> </fa>
-            <fa name="trash" class="icon-trash" (click)="openeditModal(deleteBlogModal, i)"></fa>
+            <fa name="trash" class="icon-trash" (click)="opendeleteModal(deleteBlogModal, i)"></fa>
           </th>
         </tr>
       </tbody>
@@ -68,8 +68,7 @@
       <label for="tags">Blog Tags</label>
       <div class="input-group">
         <div class="multi-select">
-          <angular2-multiselect id="tags" [data]="dropdownList" [(ngModel)]="blog.tags"
-            [settings]="dropdownSettings">
+          <angular2-multiselect id="tags" [data]="dropdownList" [(ngModel)]="blog.tags" [settings]="dropdownSettings">
           </angular2-multiselect>
         </div>
       </div>
@@ -95,25 +94,42 @@
     </button>
   </div>
   <div class="modal-body">
-    <form>
-      <div class="form-group">
+    <div class="form-group">
+      <label for="title">Blog Title</label>
+      <div class="input-group">
+        <input id="title-edit" class="form-control" [(ngModel)]="blog.title" placeholder="Edit title of the blog">
       </div>
-      <div class="form-group">
-        <label for="desc">Blog Content</label>
-        <div class="input-group">
-          <textarea id="desc" class="form-control" placeholder="Edit the blog contents"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="desc">Blog Content</label>
+      <div class="input-group">
+        <textarea id="desc-edit" class="form-control" [(ngModel)]="blog.desc" placeholder="Edit the blog contents"></textarea>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="author">Blog Author</label>
+      <div class="input-group">
+        <input id="author-edit" class="form-control" [(ngModel)]="blog.author" placeholder="Edit author name">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="tags">Blog Tags</label>
+      <div class="input-group">
+        <div class="multi-select">
+          <angular2-multiselect id="tags" [data]="dropdownList" [(ngModel)]="blog.tags" [settings]="dropdownSettings">
+          </angular2-multiselect>
         </div>
       </div>
-      <div class="form-group">
-        <label for="img">Change Blog Image</label>
-        <div class="input-group">
-          <input id="img" type="file" class="form-control">
-        </div>
+    </div>
+    <div class="form-group">
+      <label for="img">Change Blog Image</label>
+      <div class="input-group">
+        <input id="img-edit" type="file" class="form-control">
       </div>
-    </form>
+    </div>
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-success" disabled (click)="modal.close()">Update</button>
+    <button type="button" class="btn btn-success" (click)="modal.close()">Update</button>
     <button type="button" class="btn btn-danger" (click)="modal.close()">Cancel</button>
   </div>
 </ng-template>
