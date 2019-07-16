@@ -11,6 +11,7 @@ import Swal from 'sweetalert2';
 export class AdminDsahboardComponent implements OnInit {
   public cardList;
   public editmodaltitle;
+  public deleteblogid;
   public date = new Date();
   public dropdownList = [
     { 'id': 1, 'itemName': 'Electornics' },
@@ -75,7 +76,7 @@ export class AdminDsahboardComponent implements OnInit {
     const body = {
       id: this.cardList[i]._id.$oid,
     };
-    const url = `${this.Config.API_ENDPOINT}${this.Config.API_ENDPOINT_NAMES.blogupdate}`;
+    const url = `${this.Config.API_ENDPOINT}${this.Config.API_ENDPOINT_NAMES.blogpost}`;
     this.httpLayer.post(url, body).subscribe((response) => {
       if (response['status'] === 'success') {
         this.blog = {
@@ -100,7 +101,34 @@ export class AdminDsahboardComponent implements OnInit {
 
   opendeleteModal(modalId, i) {
     this.editmodaltitle = this.cardList[i]['title'];
+    this.deleteblogid = this.cardList[i]['_id']['$oid'];
     this.openModal(modalId);
+  }
+
+  deleteblog() {
+    const body = {
+      id: this.deleteblogid,
+    };
+    const url = `${this.Config.API_ENDPOINT}${this.Config.API_ENDPOINT_NAMES.blogdelete}`;
+    this.httpLayer.post(url, body).subscribe((response) => {
+      if (response['status'] === 'success') {
+        this.modalService.dismissAll();
+        this.getBlogAll();
+        Swal.fire({
+          title: this.blog.title,
+          text: 'Blog deleted successfully',
+          type: 'success',
+          confirmButtonText: 'Ok'
+        });
+      } else {
+        Swal.fire({
+          title: this.blog.title,
+          text: 'Blog deletion falied',
+          type: 'error',
+          confirmButtonText: 'Ok'
+        });
+      }
+    })
   }
 
   addBlog() {

@@ -103,7 +103,8 @@
     <div class="form-group">
       <label for="desc">Blog Content</label>
       <div class="input-group">
-        <textarea id="desc-edit" class="form-control" [(ngModel)]="blog.desc" placeholder="Edit the blog contents"></textarea>
+        <textarea id="desc-edit" class="form-control" [(ngModel)]="blog.desc"
+          placeholder="Edit the blog contents"></textarea>
       </div>
     </div>
     <div class="form-group">
@@ -152,7 +153,7 @@
     </form>
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-success" disabled (click)="modal.close()">Delete</button>
+    <button type="button" class="btn btn-success" (click)="deleteblog()">Delete</button>
     <button type="button" class="btn btn-danger" (click)="modal.close()">Cancel</button>
   </div>
 </ng-template>
