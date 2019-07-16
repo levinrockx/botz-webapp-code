@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttplayerService } from '../../HttpService/httplayer.service';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { ConfigService } from '../../Config/config.service';
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-admin-dsahboard',
   templateUrl: './admin-dsahboard.component.html',
@@ -56,6 +57,13 @@ export class AdminDsahboardComponent implements OnInit {
   }
 
   openModal(modalId) {
+    this.blog = {
+      title: '',
+      desc: '',
+      date: '',
+      author: '',
+      tags: [],
+    };
     this.modalService.open(modalId, {
       size: 'lg',
       centered: true,
@@ -74,6 +82,19 @@ export class AdminDsahboardComponent implements OnInit {
       if (response['status'] === 'success') {
         this.modalService.dismissAll();
         this.getBlogAll();
+        Swal.fire({
+          title: this.blog.title,
+          text: 'Blog added successfully',
+          type: 'success',
+          confirmButtonText: 'Ok'
+        });
+      } else {
+        Swal.fire({
+          title: this.blog.title,
+          text: 'Blog adding falied',
+          type: 'error',
+          confirmButtonText: 'Ok'
+        });
       }
     });
   }
