@@ -44,7 +44,8 @@
 .video-container-main {
   // z-index: -1;
   // height: 100vh;
-  // overflow: hidden;
+  overflow: hidden;
+  width: 100%;
   position: absolute;
   bottom: 0;
 }
