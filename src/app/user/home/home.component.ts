@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
   @ViewChild('rowOne', { static: true }) rowOne: ElementRef;
   @ViewChild('rowTwo', { static: true }) rowTwo: ElementRef;
   @ViewChild('rowThree', { static: true }) rowThree: ElementRef;
+  @ViewChild('bgVideo', { static: true }) bgVideo: ElementRef;
 
   constructor(
     private httpLayer: HttplayerService,
@@ -22,9 +23,15 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.startVideo();
     this.startAnimation();
     this.getBlogAll();
   }
+
+  startVideo() {
+    this.bgVideo.nativeElement.play();
+  }
+
   startAnimation() {
     TweenMax.staggerFrom(
       [this.rowOne.nativeElement,
@@ -48,7 +55,7 @@ export class HomeComponent implements OnInit {
     this.router.navigate([routeName]);
   }
 
-  blogopen(id){
+  blogopen(id) {
     const url = `/blogarticle/${id}`;
     this.reRoute(url);
   }

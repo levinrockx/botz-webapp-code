@@ -1,6 +1,6 @@
 <div class="row banner-main">
   <div class="video-container-main">
-    <video autoplay muted playsinline loop id="bgVideo">
+    <video autoplay muted playsinline loop id="bgVideo" #bgVideo>
       <source src="assets/videos/bg1.mp4" type="video/mp4">
       Your browser does not support HTML5 video.
     </video>
@@ -23,7 +23,7 @@
         providing full lifecycle embedded software and hardware development services. BOTZ specialises in creating
         bespoke production grade embedded software systems.
       </p> -->
-      <button class="btn ghost-btn" (click)="reRoute('/about')">Know more</button>
+      <button class="btn ghost-btn custom-btn" (click)="reRoute('/about')">Know more</button>
     </div>
     <!-- <div class="row p-0 m-0 arrow-icon-wrapper">
       <fa class="down-arrow-icon" name="arrow-down"></fa>

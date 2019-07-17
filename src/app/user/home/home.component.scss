@@ -1,5 +1,5 @@
 .banner-main {
-  height: 100vh;
+  // height: 100vh;
   width: 100%;
   padding: 0px;
   margin: 0px;
@@ -11,11 +11,12 @@
   background-color: #000000;
 }
 .banner-content {
-  margin-top: 200px;
+  padding-top: 200px;
+  height: 100vh;
   color: #ffffff;
-  width: 580px;
-  position: absolute;
-  top: 0px;
+  // width: 580px;
+  // position: absolute;
+  // top: 0px;
   .banner-text {
     margin-bottom: 50px;
   }
@@ -42,11 +43,15 @@
 }
 .video-container-main {
   // z-index: -1;
-  height: 100vh;
+  // height: 100vh;
   // overflow: hidden;
+  position: absolute;
+  bottom: 0;
 }
 video {
   width: 100vw;
+  // height: 100vh;
+  transform: translateY(10px);
 }
 // #bgVideo {
 // position: absolute;
@@ -135,3 +140,6 @@ video {
 //   color: #ffffff;
 //   font-size: xx-large;
 // }
+.custom-btn {
+  position: absolute;
+}
