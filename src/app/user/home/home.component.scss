@@ -143,3 +143,29 @@ video {
 .custom-btn {
   position: absolute;
 }
+@media (max-width: 576px) {
+  .banner-content {
+    padding-top: 100px !important;
+    h1 {
+      font-size: 50px !important;
+    }
+    .banner-text {
+      margin-bottom: 0px !important;
+    }
+  }
+  .mission-text {
+    font-size: 0.88rem !important;
+  }
+}
+@media (max-height: 630px) {
+  .banner-content {
+    padding-top: 100px !important;
+    h1 {
+      font-size: 30px !important;
+      height: 50px !important;
+    }
+    .banner-text {
+      margin-bottom: 0px !important;
+    }
+  }
+}

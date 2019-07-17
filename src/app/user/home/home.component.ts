@@ -11,6 +11,7 @@ declare var TweenMax: any;
 })
 export class HomeComponent implements OnInit {
   public cardList;
+  @ViewChild('mainRow', { static: true }) mainRow: ElementRef;
   @ViewChild('rowOne', { static: true }) rowOne: ElementRef;
   @ViewChild('rowTwo', { static: true }) rowTwo: ElementRef;
   @ViewChild('rowThree', { static: true }) rowThree: ElementRef;
@@ -33,15 +34,28 @@ export class HomeComponent implements OnInit {
   }
 
   startAnimation() {
-    TweenMax.staggerFrom(
-      [this.rowOne.nativeElement,
-      this.rowTwo.nativeElement,
-      this.rowThree.nativeElement], 1,
-      {
-        y: '100%',
-        ease: Power4.easeOut,
-        delay: 0.3
-      }, 0.5);
+    const containerWidth = this.mainRow.nativeElement.offsetWidth;
+    if (containerWidth > 576) {
+      TweenMax.staggerFrom(
+        [this.rowOne.nativeElement,
+        this.rowTwo.nativeElement,
+        this.rowThree.nativeElement], 1,
+        {
+          y: '100%',
+          ease: Power4.easeOut,
+          delay: 0.3
+        }, 0.5);
+    } else {
+      TweenMax.staggerFrom(
+        [this.rowOne.nativeElement,
+        this.rowTwo.nativeElement,
+        this.rowThree.nativeElement], 1,
+        {
+          y: '200%',
+          ease: Power4.easeOut,
+          delay: 0.3
+        }, 0.5);
+    }
   }
 
   getBlogAll() {
