@@ -37,6 +37,7 @@
   background-color: #ffffff;
   padding: 0;
   transition: 0.5s;
+  overflow: hidden;
 }
 .blog-card:hover {
   // transition: 0.5s;
@@ -63,6 +64,9 @@
   color: #bebebe;
   padding-bottom: 10px;
   font-size: 0.8rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 @media (max-width: 992px) {
   .bloghead {

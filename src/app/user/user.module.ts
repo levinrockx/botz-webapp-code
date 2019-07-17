@@ -20,6 +20,7 @@ import { AppsComponent } from './apps/apps.component';
 import { ResistanceFinderComponent } from './resistance-finder/resistance-finder.component';
 import { ConfigService } from '../Config/config.service';
 import { HttplayerService } from '../HttpService/httplayer.service';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     UserLandingComponent,
@@ -41,6 +42,7 @@ import { HttplayerService } from '../HttpService/httplayer.service';
   imports: [
     UserRoutingModule,
     CommonModule,
+    FormsModule,
     NguiMapModule.forRoot({ apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyCiLrXdz4_P_D7f1g8PjqVvu2jtui_jHI0' }),
     AngularFontAwesomeModule
   ],

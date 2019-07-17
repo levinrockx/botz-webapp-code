@@ -26,7 +26,7 @@
               Name :
             </div>
             <div class="form-label col-9 p-0 m-0">
-              <input class="cust-input" type="text" placeholder="Enter your name">
+              <input class="cust-input" [(ngModel)]="meassage_body.name" type="text" placeholder="Enter your name">
             </div>
           </div>
           <div class="col-12 row p-0 m-0 contact-item">
@@ -34,7 +34,7 @@
               Email :
             </div>
             <div class="form-label col-9 p-0 m-0">
-              <input class="cust-input" type="email" placeholder="Enter your email id">
+              <input class="cust-input" [(ngModel)]="meassage_body.email"  type="email" placeholder="Enter your email id">
             </div>
           </div>
           <div class="col-12 row p-0 m-0 contact-item">
@@ -42,14 +42,14 @@
               Message:
             </div>
             <div class="form-label col-9 p-0 m-0">
-              <textarea class="cust-input" placeholder="Type your message"></textarea>
+              <textarea class="cust-input" [(ngModel)]="meassage_body.message"  placeholder="Type your message"></textarea>
             </div>
           </div>
           <div class="col-12 row p-0 m-0 contact-item">
             <div class="form-label col-3 p-0 m-0">
             </div>
             <div class="form-label col-9 p-0 m-0">
-              <button class="btn regular-btn pull-right">submit</button>
+              <button class="btn regular-btn pull-right" (click)="submit()">submit</button>
             </div>
           </div>
         </div>
