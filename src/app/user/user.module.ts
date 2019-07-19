@@ -21,6 +21,7 @@ import { ResistanceFinderComponent } from './resistance-finder/resistance-finder
 import { ConfigService } from '../Config/config.service';
 import { HttplayerService } from '../HttpService/httplayer.service';
 import { FormsModule } from '@angular/forms';
+import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown';
 @NgModule({
   declarations: [
     UserLandingComponent,
@@ -44,7 +45,8 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     FormsModule,
     NguiMapModule.forRoot({ apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyCiLrXdz4_P_D7f1g8PjqVvu2jtui_jHI0' }),
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    AngularMultiSelectModule
   ],
   providers: [
     ConfigService,

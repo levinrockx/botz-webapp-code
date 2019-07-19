@@ -1,5 +1,37 @@
-<div class="main">
-  <p>
-    resistance-finder works!
-  </p>  
+<div class="row p-0 m-0 resitance-finder-main">
+  <div class="container">
+    <div class="heading-main">
+      Resistance Finder
+    </div>
+    <div class="col-12 p-0 m-0 row four-band-app-main">
+      <div class="sub-heading col-12 p-0">
+        Select the color of each band of resistor :
+      </div>
+      <div class="col-6 p-0 four-band-app-left-main">
+        <div class="col-6 p-0 m-0 multi-select">
+          <angular2-multiselect id="bandone" (onSelect)="findResistance($event)" (onDeSelect)="findResistance($event)"
+            [data]="dropdownList.bandOne" [(ngModel)]="band.one" [settings]="dropdownSettingsOne">
+          </angular2-multiselect>
+        </div>
+        <div class="col-6 p-0 m-0 multi-select">
+          <angular2-multiselect id="bandtwo" (onSelect)="findResistance($event)" (onDeSelect)="findResistance($event)"
+            [data]="dropdownList.bandTwo" [(ngModel)]="band.two" [settings]="dropdownSettingsTwo">
+          </angular2-multiselect>
+        </div>
+        <div class="col-6 p-0 m-0 multi-select">
+          <angular2-multiselect id="muliplier" (onSelect)="findResistance($event)" (onDeSelect)="findResistance($event)"
+            [data]="dropdownList.bandThree" [(ngModel)]="band.three" [settings]="dropdownSettingsThree">
+          </angular2-multiselect>
+        </div>
+        <div class="col-6 p-0 m-0 multi-select">
+          <angular2-multiselect id="tolerence" (onSelect)="findResistance($event)" (onDeSelect)="findResistance($event)"
+            [data]="dropdownList.bandFour" [(ngModel)]="band.four" [settings]="dropdownSettingsFour">
+          </angular2-multiselect>
+        </div>
+      </div>
+      <div class="col-6 p-0 four-band-app-right-main">
+        {{resistance_value}}
+      </div>
+    </div>
+  </div>
 </div>
