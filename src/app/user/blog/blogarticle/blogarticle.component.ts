@@ -9,7 +9,14 @@ import { ConfigService } from '../../../Config/config.service';
 })
 export class BlogarticleComponent implements OnInit {
   public blogId;
-  public blog = {};
+  public blog = {
+    'title': '',
+    'author': '',
+    'desc': '',
+    'tags':[],
+    'date':'',
+  };
+  public cardList = [];
   constructor(
     private route: ActivatedRoute,
     private httpLayer: HttplayerService,
@@ -36,11 +43,11 @@ export class BlogarticleComponent implements OnInit {
       // console.log(response);
       if (response['status'] === 'success') {
         this.blog = {
-          title: response['data']['title'],
-          desc: response['data']['desc'],
-          author: response['data']['author'],
-          date: response['data']['date'],
-          tags: response['data']['tags']
+          'title': response['data']['title'],
+          'desc': response['data']['desc'],
+          'author': response['data']['author'],
+          'date': response['data']['date'],
+          'tags': response['data']['tags']
         };
       }
     });

@@ -15,7 +15,7 @@ export class VersionComponent implements OnInit {
   @ViewChild('headingTwo', { static: true }) headingTwo: ElementRef;
   @ViewChild('contentTwo', { static: true }) contentTwo: ElementRef;
 
-  private version;
+  public version;
 
   constructor(
     private Config: ConfigService,
