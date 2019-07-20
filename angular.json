@@ -70,11 +70,13 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "botz-webapp:build"
+            "browserTarget": "botz-webapp:build",
+            "proxyConfig": "proxy.config.json"
           },
           "configurations": {
             "production": {
-              "browserTarget": "botz-webapp:build:production"
+              "browserTarget": "botz-webapp:build:production",
+              "proxyConfig": "proxy.config.json"
             }
           }
         },
