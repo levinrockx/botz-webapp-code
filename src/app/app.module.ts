@@ -12,6 +12,7 @@ import { DataTablesModule } from 'angular-datatables';
 import { ConfigService } from './Config/config.service';
 import { HttplayerService } from './HttpService/httplayer.service';
 import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +30,7 @@ import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown';
     AngularMultiSelectModule
   ],
   providers: [
+    {provide: LocationStrategy, useClass:HashLocationStrategy},
     ConfigService,
     HttplayerService,
   ],
